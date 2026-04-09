@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framegate — The AI Twin of a Senior Strategy Partner</title>
+    <meta name="description" content="Meet Liz — your AI senior consultant for strategic and ad-hoc political and corporate communication. Bias-free, data-validated, always available.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* ============================================
+           Landing Page Overrides
+           Clean, white, GPT-like aesthetic
+           ============================================ */
+
+        body {
+            background: #ffffff;
+        }
+
+        /* ── Nav ── */
+        .lp-nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-light);
+            padding: var(--space-4) var(--space-6);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .lp-nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lp-nav-logo img {
+            height: 28px;
+            display: block;
+        }
+
+        .lp-nav-links {
+            display: flex;
+            gap: var(--space-6);
+            align-items: center;
+        }
+
+        .lp-nav-links a,
+        .lp-nav-links a:link,
+        .lp-nav-links a:visited {
+            text-decoration: none !important;
+            color: var(--text-secondary);
+            font-size: var(--text-sm);
+            font-weight: var(--font-medium);
+            transition: color 0.2s ease;
+        }
+
+        .lp-nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .lp-nav-cta {
+            background: var(--neutral-900) !important;
+            color: #ffffff !important;
+            padding: 8px 20px !important;
+            border-radius: 6px !important;
+            font-size: var(--text-sm) !important;
+            font-weight: var(--font-medium) !important;
+            transition: background 0.2s ease !important;
+        }
+
+        .lp-nav-cta:hover {
+            background: var(--neutral-800) !important;
+        }
+
+        /* ── Hamburger ── */
+        .lp-hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 6px;
+        }
+
+        .lp-hamburger span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: var(--text-primary);
+            margin: 4px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* ── Section Base ── */
+        .lp-section {
+            padding: 100px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .lp-section-narrow {
+            max-width: 800px;
+        }
+
+        /* ── Hero ── */
+        .lp-hero {
+            padding: 140px 24px 120px;
+            text-align: center;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .lp-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: var(--font-semibold);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--primary-600);
+            background: var(--primary-50);
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: var(--space-6);
+        }
+
+        .lp-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            font-weight: var(--font-bold);
+            color: var(--text-primary);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: var(--space-6);
+        }
+
+        .lp-hero h1 .accent {
+            color: var(--primary-500);
+        }
+
+        .lp-hero-sub {
+            font-size: var(--text-xl);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            max-width: 640px;
+            margin: 0 auto var(--space-8);
+            font-weight: var(--font-normal);
+        }
+
+        .lp-hero-cta {
+            display: flex;
+            gap: var(--space-4);
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: var(--space-8);
+        }
+
+        .lp-btn-primary,
+        .lp-btn-primary:link,
+        .lp-btn-primary:visited {
+            background: var(--neutral-900);
+            color: #ffffff !important;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: var(--text-base);
+            font-weight: var(--font-medium);
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .lp-btn-primary:hover {
+            background: var(--neutral-800);
+            transform: translateY(-1px);
+        }
+
+        .lp-btn-secondary,
+        .lp-btn-secondary:link,
+        .lp-btn-secondary:visited {
+            background: transparent;
+            color: var(--text-secondary) !important;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-size: var(--text-base);
+            font-weight: var(--font-medium);
+            border: 1px solid var(--border-default);
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .lp-btn-secondary:hover {
+            border-color: var(--text-primary);
+            color: var(--text-primary) !important;
+        }
+
+        /* ── Divider ── */
+        .lp-divider {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: none;
+            border-top: 1px solid var(--border-light);
+        }
+
+        /* ── Problem Section ── */
+        .lp-problem {
+            background: var(--bg-primary);
+        }
+
+        .lp-problem-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        .lp-section-label {
+            font-size: 11px;
+            font-weight: var(--font-semibold);
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--primary-500);
+            margin-bottom: var(--space-4);
+        }
+
+        .lp-section-title {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: var(--font-bold);
+            color: var(--text-primary);
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            margin-bottom: var(--space-8);
+            max-width: 600px;
+        }
+
+        .lp-problem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+
+        .lp-problem-card {
+            padding: var(--space-6);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            background: #ffffff;
+        }
+
+        .lp-problem-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-3);
+        }
+
+        .lp-problem-card h3 {
+            font-size: var(--text-base);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .lp-problem-card p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            margin: 0;
+        }
+
+        /* ── What You Get ── */
+        .lp-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+
+        .lp-benefit-card {
+            padding: var(--space-8);
+            border-radius: 12px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-light);
+        }
+
+        .lp-benefit-card .number {
+            font-size: var(--text-sm);
+            font-weight: var(--font-bold);
+            color: var(--primary-500);
+            margin-bottom: var(--space-3);
+            display: block;
+        }
+
+        .lp-benefit-card h3 {
+            font-size: var(--text-lg);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+            line-height: var(--leading-snug);
+        }
+
+        .lp-benefit-card p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            margin: 0;
+        }
+
+        /* ── Differentiation ── */
+        .lp-diff {
+            background: var(--neutral-900);
+            color: #ffffff;
+        }
+
+        .lp-diff-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
+
+        .lp-diff .lp-section-label {
+            color: var(--primary-400);
+        }
+
+        .lp-diff .lp-section-title {
+            color: #ffffff;
+        }
+
+        .lp-diff-columns {
+            display: grid;
+            grid-template-columns: 1fr 40px 1fr;
+            gap: var(--space-4);
+            align-items: start;
+            margin-top: var(--space-8);
+        }
+
+        .lp-diff-col h4 {
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-6);
+        }
+
+        .lp-diff-col.old h4 {
+            color: var(--neutral-500);
+        }
+
+        .lp-diff-col.new h4 {
+            color: var(--primary-400);
+        }
+
+        .lp-diff-item {
+            font-size: var(--text-base);
+            color: var(--neutral-400);
+            margin-bottom: var(--space-4);
+            line-height: var(--leading-relaxed);
+        }
+
+        .lp-diff-col.old .lp-diff-item {
+            text-decoration: line-through;
+            text-decoration-color: var(--neutral-600);
+        }
+
+        .lp-diff-col.new .lp-diff-item {
+            color: var(--neutral-200);
+        }
+
+        .lp-diff-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 40px;
+            color: var(--primary-500);
+            font-size: 1.5rem;
+        }
+
+        /* ── For Whom ── */
+        .lp-audience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+
+        .lp-audience-card {
+            padding: var(--space-8) var(--space-6);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            background: #ffffff;
+        }
+
+        .lp-audience-card h3 {
+            font-size: var(--text-base);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-4);
+        }
+
+        .lp-audience-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lp-audience-card li {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border-light);
+            line-height: var(--leading-relaxed);
+        }
+
+        .lp-audience-card li:last-child {
+            border-bottom: none;
+        }
+
+        /* ── Trust / Data ── */
+        .lp-trust {
+            background: var(--bg-primary);
+        }
+
+        .lp-trust-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 100px 24px;
+            text-align: center;
+        }
+
+        .lp-stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-8);
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-12);
+        }
+
+        .lp-stat .value {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: var(--font-bold);
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+        }
+
+        .lp-stat .label {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            margin-top: var(--space-1);
+        }
+
+        .lp-trust-note {
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            padding: var(--space-6) var(--space-8);
+            max-width: 640px;
+            text-align: left;
+        }
+
+        .lp-trust-note h4 {
+            font-size: var(--text-base);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-2);
+        }
+
+        .lp-trust-note p {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            line-height: var(--leading-relaxed);
+            margin: 0;
+        }
+
+        /* ── CTA ── */
+        .lp-cta-section {
+            background: var(--neutral-900);
+        }
+
+        .lp-cta-inner {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 100px 24px;
+            text-align: center;
+        }
+
+        .lp-cta-inner h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            font-weight: var(--font-bold);
+            color: #ffffff;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
+            margin-bottom: var(--space-4);
+        }
+
+        .lp-cta-inner p {
+            font-size: var(--text-lg);
+            color: var(--neutral-400);
+            margin-bottom: var(--space-8);
+            line-height: var(--leading-relaxed);
+        }
+
+        .lp-btn-cta,
+        .lp-btn-cta:link,
+        .lp-btn-cta:visited {
+            background: var(--primary-500);
+            color: #ffffff !important;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: var(--text-lg);
+            font-weight: var(--font-semibold);
+            text-decoration: none !important;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .lp-btn-cta:hover {
+            background: var(--primary-600);
+            transform: translateY(-1px);
+        }
+
+        /* ── Footer ── */
+        .lp-footer {
+            background: #ffffff;
+            border-top: 1px solid var(--border-light);
+            padding: var(--space-8) 24px;
+        }
+
+        .lp-footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: var(--space-6);
+        }
+
+        .lp-footer-left {
+            font-size: var(--text-sm);
+            color: var(--text-tertiary);
+        }
+
+        .lp-footer-left img {
+            height: 20px;
+            margin-bottom: var(--space-2);
+            display: block;
+            opacity: 0.5;
+        }
+
+        .lp-footer-right {
+            font-size: var(--text-xs);
+            color: var(--text-tertiary);
+            text-align: right;
+            line-height: var(--leading-relaxed);
+            max-width: 400px;
+        }
+
+        .lp-footer-right a,
+        .lp-footer-right a:link,
+        .lp-footer-right a:visited {
+            color: var(--text-tertiary) !important;
+            text-decoration: none !important;
+        }
+
+        .lp-footer-right a:hover {
+            color: var(--text-secondary) !important;
+        }
+
+        /* ============================================
+           Responsive
+           ============================================ */
+        @media (max-width: 768px) {
+            .lp-hero {
+                padding: 80px 20px 60px;
+            }
+
+            .lp-problem-grid,
+            .lp-audience-grid,
+            .lp-stats-row {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lp-diff-columns {
+                grid-template-columns: 1fr;
+                gap: var(--space-8);
+            }
+
+            .lp-diff-arrow {
+                display: none;
+            }
+
+            .lp-section {
+                padding: 60px 20px;
+            }
+
+            .lp-problem-inner,
+            .lp-diff-inner,
+            .lp-trust-inner,
+            .lp-cta-inner {
+                padding: 60px 20px;
+            }
+
+            .lp-nav-links .nav-link-text {
+                display: none;
+            }
+
+            .lp-hamburger {
+                display: block;
+            }
+
+            .lp-nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #ffffff;
+                border-top: 1px solid var(--border-light);
+                flex-direction: column;
+                padding: var(--space-4);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+
+            .lp-nav-links.open {
+                display: flex;
+            }
+
+            .lp-footer-inner {
+                flex-direction: column;
+            }
+
+            .lp-footer-right {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ══════════ NAV ══════════ -->
+    <nav class="lp-nav">
+        <div class="lp-nav-container">
+            <a href="/" class="lp-nav-logo">
+                <img src="Logo/(LOGO)-(WEBSITE)-(FRAMEGATE_Ai)-Schwarz-ohne-ai-20260409.png" alt="Framegate">
+            </a>
+            <button class="lp-hamburger" onclick="document.querySelector('.lp-nav-links').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="lp-nav-links">
+                <a href="#solution" class="nav-link-text">Solution</a>
+                <a href="#audience" class="nav-link-text">For Whom</a>
+                <a href="#contact" class="lp-nav-cta">Get Access</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══════════ HERO ══════════ -->
+    <section class="lp-hero">
+        <h1>Meet <span class="accent">Liz</span>, your senior consultant for strategic and ad-hoc political and corporate&nbsp;communication.</h1>
+        <p class="lp-hero-sub">
+            The world's first AI Twin of a senior strategy partner with Anti-Hallucination Architecture.
+        </p>
+    </section>
+
+    <hr class="lp-divider">
+
+    <!-- ══════════ PROBLEM ══════════ -->
+    <section class="lp-problem">
+        <div class="lp-problem-inner">
+            <div class="lp-section-label">The Problem</div>
+            <h2 class="lp-section-title">Communications strategies still rely on slow, expensive, and fragmented inputs.</h2>
+            <div class="lp-problem-grid">
+                <div class="lp-problem-card">
+                    <h3>Weeks of consulting</h3>
+                    <p>By the time the briefing is ready, the situation has already changed.</p>
+                </div>
+                <div class="lp-problem-card">
+                    <h3>Expensive advisory teams</h3>
+                    <p>Senior-level insight costs six figures — and still depends on individual availability.</p>
+                </div>
+                <div class="lp-problem-card">
+                    <h3>Opinion-based and biased</h3>
+                    <p>Most strategic advice is shaped by personal experience and blind spots — not validated, bias-free analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ WHAT YOU GET ══════════ -->
+    <section class="lp-section" id="solution">
+        <div class="lp-section-label">What You Get</div>
+        <h2 class="lp-section-title">Faster decisions. Validated signals. Zero guesswork.</h2>
+        <div class="lp-benefits-grid">
+            <div class="lp-benefit-card">
+                <span class="number">01</span>
+                <h3>Early signal detection</h3>
+                <p>See emerging shifts months before they impact markets, policy, or reputation.</p>
+            </div>
+            <div class="lp-benefit-card">
+                <span class="number">02</span>
+                <h3>Data-validated insights</h3>
+                <p>Every recommendation is grounded in structured data — not opinions or hunches.</p>
+            </div>
+            <div class="lp-benefit-card">
+                <span class="number">03</span>
+                <h3>Briefing-ready outputs</h3>
+                <p>Get outputs formatted for decision-makers. No raw data. No extra processing.</p>
+            </div>
+            <div class="lp-benefit-card">
+                <span class="number">04</span>
+                <h3>Real-time recommendations</h3>
+                <p>React in real time — not after the damage is done. 24/7 strategic intelligence on demand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ DIFFERENTIATION ══════════ -->
+    <section class="lp-diff">
+        <div class="lp-diff-inner">
+            <div class="lp-section-label">Why It's Different</div>
+            <h2 class="lp-section-title">Think tank + data science + advisory — in one system.</h2>
+            <div class="lp-diff-columns">
+                <div class="lp-diff-col old">
+                    <h4>Instead of</h4>
+                    <div class="lp-diff-item">Weeks of consulting engagements</div>
+                    <div class="lp-diff-item">Expensive senior advisory teams</div>
+                    <div class="lp-diff-item">Internal alignment loops</div>
+                    <div class="lp-diff-item">Fragmented data sources</div>
+                </div>
+                <div class="lp-diff-arrow">&#8594;</div>
+                <div class="lp-diff-col new">
+                    <h4>You get</h4>
+                    <div class="lp-diff-item">Instant access, 24/7</div>
+                    <div class="lp-diff-item">Research-grade analysis</div>
+                    <div class="lp-diff-item">Actionable recommendations</div>
+                    <div class="lp-diff-item">Fraction of the cost</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ FOR WHOM ══════════ -->
+    <section class="lp-section" id="audience">
+        <div class="lp-section-label">Built For Decision-Makers</div>
+        <h2 class="lp-section-title">Your strategy consultant for political and corporate communication.</h2>
+        <p style="font-size:var(--text-base); color:var(--text-secondary); line-height:var(--leading-relaxed); max-width:680px; margin-top:var(--space-2);">From quick research briefs to ad-hoc messaging. From communications strategy for CEOs and politicians to full multi-channel campaign design and counter-narrative strategies in high-stakes election cycles.</p>
+        <div class="lp-audience-grid">
+            <div class="lp-audience-card">
+                <h3>CEOs &amp; Corporate Communications</h3>
+                <ul>
+                    <li>Communications risk detection</li>
+                    <li>Reputation protection</li>
+                    <li>Strategic messaging</li>
+                </ul>
+            </div>
+            <div class="lp-audience-card">
+                <h3>Campaigns &amp; Political Teams</h3>
+                <ul>
+                    <li>Message testing</li>
+                    <li>Opponent messaging tracking</li>
+                    <li>Rapid response</li>
+                </ul>
+            </div>
+            <div class="lp-audience-card">
+                <h3>Newsrooms &amp; Editors</h3>
+                <ul>
+                    <li>Story angle detection</li>
+                    <li>Framing analysis</li>
+                    <li>Agenda shifts</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ TRUST / DATA ══════════ -->
+    <section class="lp-trust">
+        <div class="lp-trust-inner">
+            <div class="lp-section-label">Powered by Data</div>
+            <h2 class="lp-section-title" style="max-width:100%;text-align:center;margin-left:auto;margin-right:auto;">
+                Built on one of the largest structured datasets of U.S. political and media communication.
+            </h2>
+            <div class="lp-stats-row">
+                <div class="lp-stat">
+                    <div class="value">90,000+</div>
+                    <div class="label">Analyzed documents</div>
+                </div>
+                <div class="lp-stat">
+                    <div class="value">300+</div>
+                    <div class="label">U.S. media sources</div>
+                </div>
+                <div class="lp-stat">
+                    <div class="value">24/7</div>
+                    <div class="label">Real-time monitoring</div>
+                </div>
+            </div>
+            <div class="lp-trust-note">
+                <h4>Anti-Hallucination Architecture</h4>
+                <p>Every insight is grounded in validated data, statistical checks, and reproducible analysis. Deterministic validation steps ensure no unsupported claims reach your briefing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ CTA ══════════ -->
+    <section class="lp-cta-section" id="contact">
+        <div class="lp-cta-inner">
+            <h2>Faster. Clearer. More reliable.</h2>
+            <p>Get strategic intelligence that used to require a full advisory team — delivered instantly.</p>
+            <a href="mailto:hello@framegate.ai" class="lp-btn-cta">Get Early Access</a>
+        </div>
+    </section>
+
+    <!-- ══════════ FOOTER / IMPRESSUM ══════════ -->
+    <footer class="lp-footer">
+        <div class="lp-footer-inner">
+            <div class="lp-footer-left">
+                <img src="Logo/(LOGO)-(WEBSITE)-(FRAMEGATE_Ai)-Grau-ohne-ai-20260409.png" alt="Framegate">
+                &copy; 2026 Framegate. All rights reserved.
+            </div>
+            <div class="lp-footer-right">
+                <a href="/impressum">Impressum</a> &middot;
+                <a href="/datenschutz">Datenschutz</a> &middot;
+                <a href="mailto:hello@framegate.ai">hello@framegate.ai</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
