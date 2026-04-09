@@ -1,2 +1,1 @@
-# framgate.ai
-Hompage framegate.ai
+# framegate.ai
