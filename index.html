@@ -415,54 +415,24 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-6);
-            margin-top: var(--space-10);
+            margin-top: var(--space-8);
         }
 
-        .lp-domain-card {
-            padding: var(--space-8) var(--space-6);
-            border-radius: 12px;
-            border: 1px solid var(--border-light);
-            background: #ffffff;
-            transition: border-color 0.2s ease, transform 0.2s ease;
-        }
-
-        .lp-domain-card:hover {
-            border-color: var(--primary-500);
-            transform: translateY(-2px);
-        }
-
-        .lp-domain-num {
-            font-size: var(--text-xs);
-            font-weight: var(--font-bold);
-            color: var(--primary-500);
-            letter-spacing: 0.08em;
-            margin-bottom: var(--space-3);
-        }
-
-        .lp-domain-card h3 {
-            font-size: var(--text-lg);
-            font-weight: var(--font-semibold);
-            color: var(--text-primary);
-            margin-bottom: var(--space-5);
-            line-height: var(--leading-snug);
-            letter-spacing: -0.01em;
-        }
-
-        .lp-domain-card ul {
+        .lp-problem-card ul {
             list-style: none;
-            margin: 0;
+            margin: var(--space-3) 0 0 0;
             padding: 0;
         }
 
-        .lp-domain-card li {
+        .lp-problem-card li {
             font-size: var(--text-sm);
             color: var(--text-secondary);
-            padding: 10px 0;
+            padding: 8px 0;
             border-bottom: 1px solid var(--border-light);
             line-height: var(--leading-snug);
         }
 
-        .lp-domain-card li:last-child {
+        .lp-problem-card li:last-child {
             border-bottom: none;
         }
 
@@ -784,65 +754,62 @@
     </section>
 
     <!-- ══════════ FOR WHOM ══════════ -->
-    <section class="lp-section" id="audience">
-        <div class="lp-section-label">Built For Multi-Channel Politicians</div>
-        <h2 class="lp-section-title">From research briefs to talk-show prep — every political move, backed by data.</h2>
-        <p style="font-size:var(--text-base); color:var(--text-secondary); line-height:var(--leading-relaxed); max-width:720px; margin-top:var(--space-2);">Five operational domains. Twenty-five concrete deliverables. One AI Twin that covers the full workflow of a modern political operation.</p>
-        <div class="lp-domains-grid">
-            <div class="lp-domain-card">
-                <div class="lp-domain-num">01</div>
-                <h3>Public Communication</h3>
-                <ul>
-                    <li>Opponent Tracking</li>
-                    <li>Interview Preparation</li>
-                    <li>Talk Show Briefings</li>
-                    <li>Steelman &amp; Argument Logic</li>
-                    <li>Speechwriting</li>
-                </ul>
-            </div>
-            <div class="lp-domain-card">
-                <div class="lp-domain-num">02</div>
-                <h3>Campaign Operations</h3>
-                <ul>
-                    <li>Campaign Strategy</li>
-                    <li>Campaign Design</li>
-                    <li>Core Messaging</li>
-                    <li>Opponent Analysis</li>
-                    <li>Counter-Narrative Playbooks</li>
-                </ul>
-            </div>
-            <div class="lp-domain-card">
-                <div class="lp-domain-num">03</div>
-                <h3>Newsroom Management</h3>
-                <ul>
-                    <li>Journalist Tracking</li>
-                    <li>Ideological Mapping</li>
-                    <li>Press Release Messaging</li>
-                    <li>Targeted Messaging</li>
-                    <li>Media Influence Analysis</li>
-                </ul>
-            </div>
-            <div class="lp-domain-card">
-                <div class="lp-domain-num">04</div>
-                <h3>Political Network Influencing</h3>
-                <ul>
-                    <li>Political Network Management</li>
-                    <li>Tipping Point Detection</li>
-                    <li>Hidden Coalition Detection</li>
-                    <li>Coalition Trend Analysis</li>
-                    <li>Majority-Building Briefings</li>
-                </ul>
-            </div>
-            <div class="lp-domain-card">
-                <div class="lp-domain-num">05</div>
-                <h3>Discourse Forecasting</h3>
-                <ul>
-                    <li>Research Briefings</li>
-                    <li>Ideological Shift Tracking</li>
-                    <li>Rhetorical Trend Analysis</li>
-                    <li>Early Tipping Point Detection</li>
-                    <li>Framing Evolution Reports</li>
-                </ul>
+    <section id="audience">
+        <div class="lp-problem-inner">
+            <div class="lp-section-label">Built For Politicians Communicating in Multi-Channel Algorithmic Environments</div>
+            <h2 class="lp-section-title">From research briefs to talk-show prep — available in seconds, without exhausting meetings.</h2>
+            <p style="font-size:var(--text-base); color:var(--text-secondary); line-height:var(--leading-relaxed); max-width:720px; margin-top:var(--space-2);">Five operational domains. Twenty-five concrete deliverables. One AI Twin that covers the full workflow of a modern political operation.</p>
+            <div class="lp-domains-grid">
+                <div class="lp-problem-card">
+                    <h3>Public Communication</h3>
+                    <ul>
+                        <li>Opponent Tracking</li>
+                        <li>Interview Preparation</li>
+                        <li>Talk Show Briefings</li>
+                        <li>Social Media Messaging</li>
+                        <li>Speechwriting</li>
+                    </ul>
+                </div>
+                <div class="lp-problem-card">
+                    <h3>Campaign Operations</h3>
+                    <ul>
+                        <li>Campaign Strategy</li>
+                        <li>Campaign Design</li>
+                        <li>Core Messaging</li>
+                        <li>Opponent Analysis</li>
+                        <li>Counter-Narrative Playbooks</li>
+                    </ul>
+                </div>
+                <div class="lp-problem-card">
+                    <h3>Newsroom Management</h3>
+                    <ul>
+                        <li>Journalist Tracking</li>
+                        <li>Ideological Mapping</li>
+                        <li>Press Release Messaging</li>
+                        <li>Targeted Messaging</li>
+                        <li>Media Influence Analysis</li>
+                    </ul>
+                </div>
+                <div class="lp-problem-card">
+                    <h3>Political Network Influencing</h3>
+                    <ul>
+                        <li>Political Network Management</li>
+                        <li>Tipping Point Detection</li>
+                        <li>Hidden Coalition Detection</li>
+                        <li>Coalition Trend Analysis</li>
+                        <li>Majority-Building Briefings</li>
+                    </ul>
+                </div>
+                <div class="lp-problem-card">
+                    <h3>Discourse Forecasting</h3>
+                    <ul>
+                        <li>Research Briefings</li>
+                        <li>Ideological Shift Tracking</li>
+                        <li>Rhetorical Trend Analysis</li>
+                        <li>Early Tipping Point Detection</li>
+                        <li>Framing Evolution Reports</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -905,7 +872,7 @@
     <section class="lp-cta-section" id="contact">
         <div class="lp-cta-inner">
             <h2>Every political move — backed by data.</h2>
-            <p>Strategy, messaging, and rapid response for modern politicians — delivered by an AI Twin that never sleeps.</p>
+            <p>Strategy, messaging, and rapid response for modern politicians — delivered by an AI Twin of a Senior Communication Expert that never sleeps.</p>
             <a href="access.html" class="lp-btn-cta">Get Access</a>
         </div>
     </section>
