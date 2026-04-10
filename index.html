@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Framegate — The AI Twin of a Senior Strategy Partner</title>
-    <meta name="description" content="Meet Liz — your AI senior consultant for strategic and ad-hoc political and corporate communication. Bias-free, data-validated, always available.">
+    <title>Framegate — The AI Twin of a Senior Political Strategist</title>
+    <meta name="description" content="Meet Liz — the world's first AI Twin of a senior expert for political communication. Bias-free, data-validated, always available.">
     <link rel="stylesheet" href="style.css">
     <style>
         /* ============================================
@@ -410,6 +410,62 @@
             border-bottom: none;
         }
 
+        /* ── Domains (Multi-Channel Politicians) ── */
+        .lp-domains-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            margin-top: var(--space-10);
+        }
+
+        .lp-domain-card {
+            padding: var(--space-8) var(--space-6);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            background: #ffffff;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .lp-domain-card:hover {
+            border-color: var(--primary-500);
+            transform: translateY(-2px);
+        }
+
+        .lp-domain-num {
+            font-size: var(--text-xs);
+            font-weight: var(--font-bold);
+            color: var(--primary-500);
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-3);
+        }
+
+        .lp-domain-card h3 {
+            font-size: var(--text-lg);
+            font-weight: var(--font-semibold);
+            color: var(--text-primary);
+            margin-bottom: var(--space-5);
+            line-height: var(--leading-snug);
+            letter-spacing: -0.01em;
+        }
+
+        .lp-domain-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .lp-domain-card li {
+            font-size: var(--text-sm);
+            color: var(--text-secondary);
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-light);
+            line-height: var(--leading-snug);
+        }
+
+        .lp-domain-card li:last-child {
+            border-bottom: none;
+        }
+
         /* ── Trust / Data ── */
         .lp-trust {
             background: var(--bg-primary);
@@ -571,7 +627,8 @@
             }
 
             .lp-problem-grid,
-            .lp-audience-grid {
+            .lp-audience-grid,
+            .lp-domains-grid {
                 grid-template-columns: 1fr !important;
             }
 
@@ -651,9 +708,9 @@
 
     <!-- ══════════ HERO ══════════ -->
     <section class="lp-hero">
-        <h1>Meet <span class="accent">Liz</span>, the only advisor for political and corporate communication you'll ever&nbsp;need.</h1>
+        <h1>Meet <span class="accent">Liz</span>, the only advisor for political communication you'll ever&nbsp;need.</h1>
         <p class="lp-hero-sub">
-            <span style="color:var(--primary-500);">Liz is the world's first AI Twin of a senior partner leading a full-scale communication think-tank and agency for strategic and ad-hoc communication with Auditable Anti-Hallucination Architecture.</span>
+            <span style="color:var(--primary-500);">The world's first AI Twin of a senior expert for strategic and ad-hoc communication with Auditable Anti-Hallucination Guarantee.</span>
         </p>
     </section>
 
@@ -681,57 +738,25 @@
         </div>
     </section>
 
-    <!-- ══════════ WHAT YOU GET ══════════ -->
-    <section class="lp-section" id="solution">
-        <div class="lp-section-label">What You Get</div>
-        <h2 class="lp-section-title">Faster decisions. Validated signals. Zero guesswork.</h2>
-        <div class="lp-benefits-grid">
-            <div class="lp-benefit-card">
-                <span class="number">01</span>
-                <h3>Early signal detection</h3>
-                <p>See emerging shifts months before they impact markets, policy, or reputation.</p>
+    <!-- ══════════ THE GAP WE CLOSE ══════════ -->
+    <section class="lp-section" id="solution" style="padding-top:120px;padding-bottom:120px;">
+        <div class="lp-section-label">The Gap We Close</div>
+        <h2 class="lp-section-title" style="max-width:700px;">We connect political communication to polling outcomes.</h2>
+        <div class="lp-problem-grid">
+            <div class="lp-problem-card">
+                <h3>Discourse &rarr; Polls</h3>
+                <p>Understand why polls move — traced back to specific narratives, framings, and media shifts. Not just what changed, but why.</p>
             </div>
-            <div class="lp-benefit-card">
-                <span class="number">02</span>
-                <h3>Data-validated insights</h3>
-                <p>Every recommendation is grounded in structured data — not opinions or hunches.</p>
+            <div class="lp-problem-card">
+                <h3>Predictive Scenarios</h3>
+                <p>Know which communication strategy has the highest statistical probability of success in the current discourse environment.</p>
             </div>
-            <div class="lp-benefit-card">
-                <span class="number">03</span>
-                <h3>Briefing-ready outputs</h3>
-                <p>Get outputs formatted for decision-makers. No raw data. No extra processing.</p>
-            </div>
-            <div class="lp-benefit-card">
-                <span class="number">04</span>
-                <h3>Real-time recommendations</h3>
-                <p>React in real time — not after the damage is done. 24/7 strategic intelligence on demand.</p>
+            <div class="lp-problem-card">
+                <h3>Correlation &amp; Causality</h3>
+                <p>Statistically validated links between public communication and public opinion. No guesswork. No gut feeling. Evidence.</p>
             </div>
         </div>
     </section>
-
-    <!-- ══════════ THE GAP ══════════ -->
-    <section class="lp-problem">
-        <div class="lp-problem-inner">
-            <div class="lp-section-label">What No One Else Can Do</div>
-            <h2 class="lp-section-title" style="max-width:700px;">We connect political communication to polling outcomes.</h2>
-            <div class="lp-problem-grid">
-                <div class="lp-problem-card">
-                    <h3>Discourse &rarr; Polls</h3>
-                    <p>Understand why polls move — traced back to specific narratives, framings, and media shifts. Not just what changed, but why.</p>
-                </div>
-                <div class="lp-problem-card">
-                    <h3>Predictive Scenarios</h3>
-                    <p>Know which communication strategy has the highest statistical probability of success in the current discourse environment.</p>
-                </div>
-                <div class="lp-problem-card">
-                    <h3>Correlation &amp; Causality</h3>
-                    <p>Statistically validated links between public communication and public opinion. No guesswork. No gut feeling. Evidence.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div style="height:80px;background:#ffffff;"></div>
 
     <!-- ══════════ DIFFERENTIATION ══════════ -->
     <section class="lp-diff">
@@ -760,32 +785,63 @@
 
     <!-- ══════════ FOR WHOM ══════════ -->
     <section class="lp-section" id="audience">
-        <div class="lp-section-label">Built For Decision-Makers</div>
-        <h2 class="lp-section-title">Your strategy consultant for political and corporate communication.</h2>
-        <p style="font-size:var(--text-base); color:var(--text-secondary); line-height:var(--leading-relaxed); max-width:680px; margin-top:var(--space-2);">From quick research briefs to ad-hoc messaging. From communications strategy for CEOs and politicians to full multi-channel campaign design and counter-narrative strategies in high-stakes election cycles.</p>
-        <div class="lp-audience-grid">
-            <div class="lp-audience-card">
-                <h3>CEOs &amp; Corporate Communications</h3>
+        <div class="lp-section-label">Built For Multi-Channel Politicians</div>
+        <h2 class="lp-section-title">From research briefs to talk-show prep — every political move, backed by data.</h2>
+        <p style="font-size:var(--text-base); color:var(--text-secondary); line-height:var(--leading-relaxed); max-width:720px; margin-top:var(--space-2);">Five operational domains. Twenty-five concrete deliverables. One AI Twin that covers the full workflow of a modern political operation.</p>
+        <div class="lp-domains-grid">
+            <div class="lp-domain-card">
+                <div class="lp-domain-num">01</div>
+                <h3>Public Communication</h3>
                 <ul>
-                    <li>Communications risk detection</li>
-                    <li>Reputation protection</li>
-                    <li>Strategic messaging</li>
+                    <li>Opponent Tracking</li>
+                    <li>Interview Preparation</li>
+                    <li>Talk Show Briefings</li>
+                    <li>Steelman &amp; Argument Logic</li>
+                    <li>Speechwriting</li>
                 </ul>
             </div>
-            <div class="lp-audience-card">
-                <h3>Campaigns &amp; Political Teams</h3>
+            <div class="lp-domain-card">
+                <div class="lp-domain-num">02</div>
+                <h3>Campaign Operations</h3>
                 <ul>
-                    <li>Message testing</li>
-                    <li>Opponent messaging tracking</li>
-                    <li>Rapid response</li>
+                    <li>Campaign Strategy</li>
+                    <li>Campaign Design</li>
+                    <li>Core Messaging</li>
+                    <li>Opponent Analysis</li>
+                    <li>Counter-Narrative Playbooks</li>
                 </ul>
             </div>
-            <div class="lp-audience-card">
-                <h3>Newsrooms &amp; Editors</h3>
+            <div class="lp-domain-card">
+                <div class="lp-domain-num">03</div>
+                <h3>Newsroom Management</h3>
                 <ul>
-                    <li>Story angle detection</li>
-                    <li>Framing analysis</li>
-                    <li>Agenda shifts</li>
+                    <li>Journalist Tracking</li>
+                    <li>Ideological Mapping</li>
+                    <li>Press Release Messaging</li>
+                    <li>Targeted Messaging</li>
+                    <li>Media Influence Analysis</li>
+                </ul>
+            </div>
+            <div class="lp-domain-card">
+                <div class="lp-domain-num">04</div>
+                <h3>Political Network Influencing</h3>
+                <ul>
+                    <li>Political Network Management</li>
+                    <li>Tipping Point Detection</li>
+                    <li>Hidden Coalition Detection</li>
+                    <li>Coalition Trend Analysis</li>
+                    <li>Majority-Building Briefings</li>
+                </ul>
+            </div>
+            <div class="lp-domain-card">
+                <div class="lp-domain-num">05</div>
+                <h3>Discourse Forecasting</h3>
+                <ul>
+                    <li>Research Briefings</li>
+                    <li>Ideological Shift Tracking</li>
+                    <li>Rhetorical Trend Analysis</li>
+                    <li>Early Tipping Point Detection</li>
+                    <li>Framing Evolution Reports</li>
                 </ul>
             </div>
         </div>
@@ -839,7 +895,7 @@
                 </div>
             </div>
             <div class="lp-trust-note">
-                <h4>Auditable Anti-Hallucination Architecture</h4>
+                <h4>Auditable Anti-Hallucination Guarantee</h4>
                 <p>Every insight is grounded in validated data, statistical checks, and reproducible analysis. Deterministic validation steps ensure no unsupported claims reach your briefing.</p>
             </div>
         </div>
@@ -848,8 +904,8 @@
     <!-- ══════════ CTA ══════════ -->
     <section class="lp-cta-section" id="contact">
         <div class="lp-cta-inner">
-            <h2>Faster. Clearer. More reliable.</h2>
-            <p>Get strategic intelligence that used to require a full advisory team — delivered instantly.</p>
+            <h2>Every political move — backed by data.</h2>
+            <p>Strategy, messaging, and rapid response for modern politicians — delivered by an AI Twin that never sleeps.</p>
             <a href="access.html" class="lp-btn-cta">Get Access</a>
         </div>
     </section>
