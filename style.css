@@ -120,9 +120,16 @@ em { color: var(--pink); font-style: normal; }
   letter-spacing: -.064em;
   font-weight: 640;
 }
+.transit-thesis {
+  max-width: 880px;
+  margin: 68px 0 0 auto;
+  font-size: clamp(27px, 3vw, 43px);
+  line-height: 1.14;
+  letter-spacing: -.035em;
+}
 .statement-lead {
   max-width: 720px;
-  margin: 44px 0 0 auto;
+  margin: 30px 0 0 auto;
   color: #bbbcc1;
   font-size: clamp(19px, 2vw, 27px);
   line-height: 1.4;
@@ -271,7 +278,7 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .scroll-cue { display: none; }
   .statement-wrap h2, .receptivity-intro h2, .architecture-heading h2, .evidence-heading h2,
   .action-section h2, .product-copy h2, .final-cta h2 { font-size: clamp(50px, 15vw, 76px); }
-  .statement-lead, .receptivity-intro > p:last-child, .architecture-heading > p:last-child, .evidence-heading > p:last-child { margin-left: 0; }
+  .transit-thesis, .statement-lead, .receptivity-intro > p:last-child, .architecture-heading > p:last-child, .evidence-heading > p:last-child { margin-left: 0; }
   .signal-path { grid-template-columns: 1fr; }
   .signal-path .signal-result { grid-column: auto; }
   .signal-path article { min-height: 150px; border-left: 0; }
