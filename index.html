@@ -111,8 +111,41 @@
       <span class="section-kicker">WHAT WE WORK WITH</span>
       <h2>We connect media, social,<br>polling and electoral evidence.</h2>
     </div>
-    <div class="input-signals" aria-label="Evidence sources">
-      <span>Media</span><span>Social</span><span>Polling</span><span>Electoral evidence</span>
+
+    <div class="fg-funnel-graphic">
+      <div class="fg-funnel-meta" aria-hidden="true">
+        <span>MANY PUBLIC SIGNALS</span>
+        <span>ONE POLITICAL DECISION</span>
+      </div>
+
+      <div class="fg-funnel-layout">
+        <div class="fg-source-list" aria-label="Public evidence sources">
+          <div><small>OFFICIAL</small><strong>Administration &amp; officials</strong></div>
+          <div><small>MEDIA</small><strong>News &amp; television</strong></div>
+          <div><small></small><strong>YouTube</strong></div>
+          <div><small></small><strong>Podcasts</strong></div>
+          <div><small></small><strong>Substack</strong></div>
+          <div><small>SOCIAL</small><strong>X</strong></div>
+          <div><small></small><strong>TikTok</strong></div>
+          <div><small></small><strong>Instagram</strong></div>
+          <div><small></small><strong>Facebook</strong></div>
+          <div><small></small><strong>LinkedIn</strong></div>
+          <div><small>RESPONSE</small><strong>Polling</strong></div>
+          <div><small></small><strong>Electoral results</strong></div>
+        </div>
+
+        <div class="fg-funnel-plot">
+          <svg role="img" aria-labelledby="fg-funnel-title fg-funnel-desc">
+            <title id="fg-funnel-title">Public signals converge into one political decision</title>
+            <desc id="fg-funnel-desc">Twelve official, media, social, polling and electoral sources enter the wide side of a funnel, are connected, weighed and compared, and leave as one recommended move.</desc>
+          </svg>
+        </div>
+      </div>
+
+      <div class="fg-funnel-result">
+        <span>FRAMEGATE INTELLIGENCE</span>
+        <strong>Recommended move</strong>
+      </div>
     </div>
   </section>
 
@@ -208,5 +241,121 @@
     </div>
   </footer>
 </main>
+<script>
+(() => {
+  const root = document.querySelector('.fg-funnel-graphic');
+  if (!root) return;
+
+  const plot = root.querySelector('.fg-funnel-plot');
+  const svg = root.querySelector('svg');
+  const ns = 'http://www.w3.org/2000/svg';
+  const sourceCount = 12;
+
+  function makeSvgElement(name, attrs = {}) {
+    const node = document.createElementNS(ns, name);
+    Object.entries(attrs).forEach(([key, value]) => node.setAttribute(key, value));
+    return node;
+  }
+
+  function drawEvidenceFunnel() {
+    const width = Math.max(150, Math.round(plot.getBoundingClientRect().width));
+    const compact = width < 360;
+    const height = compact ? 420 : 384;
+    const mouthX = 0;
+    const neckX = width * .70;
+    const outletX = width - 18;
+    const centerY = height / 2;
+    const top = 18;
+    const bottom = height - 18;
+    const neckHalf = compact ? 24 : 30;
+    const row = height / sourceCount;
+
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    while (svg.lastChild && !['title', 'desc'].includes(svg.lastChild.tagName)) {
+      svg.removeChild(svg.lastChild);
+    }
+
+    svg.appendChild(makeSvgElement('path', {
+      d: `M ${mouthX} ${top} L ${neckX} ${centerY - neckHalf} L ${width * .82} ${centerY - neckHalf} L ${outletX} ${centerY} L ${width * .82} ${centerY + neckHalf} L ${neckX} ${centerY + neckHalf} L ${mouthX} ${bottom} Z`,
+      fill: 'var(--ink)',
+      'fill-opacity': '.045',
+      stroke: 'var(--ink)',
+      'stroke-opacity': '.28',
+      'stroke-width': '1'
+    }));
+
+    for (let i = 0; i < sourceCount; i++) {
+      const y = row * i + row / 2;
+      const neckY = centerY + (i - (sourceCount - 1) / 2) * (neckHalf * 1.45 / sourceCount);
+      const highlighted = i === 2 || i === 5 || i === 10;
+
+      svg.appendChild(makeSvgElement('path', {
+        d: `M ${mouthX} ${y} C ${width * .22} ${y}, ${width * .48} ${neckY}, ${neckX} ${neckY}`,
+        fill: 'none',
+        stroke: highlighted ? 'var(--pink)' : 'var(--ink)',
+        'stroke-opacity': highlighted ? '.78' : '.22',
+        'stroke-width': highlighted ? '2' : '1.25',
+        'stroke-linecap': 'round'
+      }));
+    }
+
+    svg.appendChild(makeSvgElement('path', {
+      d: `M ${neckX} ${centerY} C ${width * .79} ${centerY}, ${width * .86} ${centerY}, ${outletX - 9} ${centerY}`,
+      fill: 'none',
+      stroke: 'var(--pink)',
+      'stroke-width': compact ? '5' : '7',
+      'stroke-linecap': 'round'
+    }));
+
+    svg.appendChild(makeSvgElement('path', {
+      d: `M ${outletX - 9} ${centerY - 8} L ${outletX} ${centerY} L ${outletX - 9} ${centerY + 8} Z`,
+      fill: 'var(--pink)'
+    }));
+
+    [
+      { x: width * .18, label: 'CONNECT' },
+      { x: width * .43, label: 'WEIGH' },
+      { x: width * .64, label: 'COMPARE' }
+    ].forEach(stage => {
+      svg.appendChild(makeSvgElement('line', {
+        x1: stage.x,
+        x2: stage.x,
+        y1: top + 22,
+        y2: bottom - 22,
+        stroke: 'var(--ink)',
+        'stroke-opacity': '.22',
+        'stroke-width': '1',
+        'stroke-dasharray': '3 5'
+      }));
+
+      const label = makeSvgElement('text', {
+        x: stage.x,
+        y: 14,
+        fill: 'var(--ink)',
+        'font-size': '11',
+        'font-weight': '700',
+        'text-anchor': 'middle'
+      });
+      label.textContent = stage.label;
+      svg.appendChild(label);
+    });
+
+    const outputLabel = makeSvgElement('text', {
+      x: outletX,
+      y: centerY + 31,
+      fill: 'var(--ink)',
+      'font-size': '11',
+      'font-weight': '700',
+      'text-anchor': 'end'
+    });
+    outputLabel.textContent = compact ? 'DECISION' : 'RECOMMENDED MOVE';
+    svg.appendChild(outputLabel);
+  }
+
+  const observer = new ResizeObserver(drawEvidenceFunnel);
+  observer.observe(plot);
+  drawEvidenceFunnel();
+})();
+</script>
 </body>
 </html>
