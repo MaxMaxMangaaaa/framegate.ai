@@ -115,7 +115,7 @@ em { color: var(--pink); font-style: normal; }
 .statement-wrap h2, .receptivity-intro h2, .architecture-heading h2, .evidence-heading h2,
 .action-section h2, .product-copy h2, .final-cta h2 {
   margin: 0;
-  font-size: clamp(54px, 7.6vw, 118px);
+  font-size: clamp(40px, 5.5vw, 86px);
   line-height: .92;
   letter-spacing: -.064em;
   font-weight: 640;
@@ -187,7 +187,7 @@ em { color: var(--pink); font-style: normal; }
 }
 .majority-section > img { position: absolute; right: -6vw; top: 4%; width: min(58vw, 820px); opacity: .18; filter: brightness(0) invert(1); }
 .majority-section .eyebrow { color: var(--white); opacity: .72; }
-.majority-section h2 { position: relative; margin: 0; font-size: clamp(82px, 13vw, 190px); line-height: .78; letter-spacing: -.085em; font-weight: 650; }
+.majority-section h2 { position: relative; margin: 0; font-size: clamp(60px, 9.4vw, 138px); line-height: .82; letter-spacing: -.078em; font-weight: 650; }
 .majority-section > p:last-child { position: relative; margin: 62px 0 0; font-size: clamp(18px, 2vw, 28px); letter-spacing: -.02em; }
 
 .architecture-section { padding: clamp(100px, 13vw, 185px) clamp(24px, 7vw, 112px); background: var(--paper); }
@@ -275,7 +275,7 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .hero-mark { width: 72vw; top: 9%; right: -18vw; }
   .scroll-cue { display: none; }
   .statement-wrap h2, .receptivity-intro h2, .architecture-heading h2, .evidence-heading h2,
-  .action-section h2, .product-copy h2, .final-cta h2 { font-size: clamp(50px, 15vw, 76px); }
+  .action-section h2, .product-copy h2, .final-cta h2 { font-size: clamp(38px, 11vw, 56px); }
   .transit-thesis, .statement-lead, .receptivity-intro > p:last-child, .architecture-heading > p:last-child, .evidence-heading > p:last-child { margin-left: 0; }
   .transit-flow { padding-top: 0; border-top: 0; }
   .transit-flow svg { display: none; }
@@ -289,7 +289,7 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .receptivity-proof article > strong { grid-column: 2; width: auto; text-align: left; }
   .proof-head span:last-child { display: none; }
   .majority-section { min-height: 78vh; }
-  .majority-section h2 { font-size: clamp(76px, 24vw, 120px); }
+  .majority-section h2 { font-size: clamp(56px, 17vw, 88px); }
   .majority-section > img { width: 92vw; right: -30vw; top: 15%; }
   .architecture-field { min-height: auto; padding: 22px; display: grid; grid-template-columns: 1fr; gap: 8px; }
   .architecture-field::before, .architecture-field::after { display: none; }
