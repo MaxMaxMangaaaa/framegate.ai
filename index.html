@@ -50,29 +50,90 @@
           </p>
         </div>
 
-        <div class="signal-path" aria-label="Illustrative path from statement to polling">
-          <div class="signal-label">ILLUSTRATIVE SIGNAL PATH</div>
-          <article>
-            <span>01 · ORIGINAL</span>
-            <strong>“Lower the cost of family life.”</strong>
-          </article>
-          <article>
-            <span>02 · EDITORIAL FRAME</span>
-            <strong>“A new spending promise.”</strong>
-          </article>
-          <article>
-            <span>03 · SOCIAL FRAME</span>
-            <strong>“Who really pays for it?”</strong>
-          </article>
-          <article>
-            <span>04 · VOTER MEANING</span>
-            <strong>“Will this change my life?”</strong>
-          </article>
-          <article class="signal-result">
-            <span>05 · POLL</span>
-            <strong>A measurable state.</strong>
-          </article>
-        </div>
+        <div class="transit-flow" aria-label="How a political message expands and changes in transit">
+      <svg viewBox="0 0 1120 540" role="img" aria-labelledby="transit-flow-title transit-flow-desc">
+        <title id="transit-flow-title">Political meaning changes in transit</title>
+        <desc id="transit-flow-desc">
+          Thin streams leave one political statement, expand through eight media and conversation
+          processors, and reach a voter with different strengths before a poll records the result.
+        </desc>
+
+        <text x="28" y="32" class="flow-kicker">WHAT WAS SAID</text>
+        <text x="445" y="32" class="flow-kicker">INFORMATION PROCESSORS</text>
+        <text x="828" y="32" class="flow-kicker">WHAT ARRIVES</text>
+        <text x="1004" y="32" class="flow-kicker">WHAT POLLS RECORD</text>
+        <line x1="28" y1="50" x2="1090" y2="50" class="flow-rule" />
+
+        <path class="flow-ribbon" d="M235 257 C320 257 350 86 450 86 L450 100 C350 100 320 260 235 260 Z" />
+        <path class="flow-ribbon flow-soft" d="M235 263 C320 263 350 134 450 134 L450 152 C350 152 320 266 235 266 Z" />
+        <path class="flow-ribbon" d="M235 269 C320 269 350 183 450 183 L450 198 C350 198 320 272 235 272 Z" />
+        <path class="flow-ribbon" d="M235 275 C320 275 350 229 450 229 L450 253 C350 253 320 278 235 278 Z" />
+        <path class="flow-ribbon flow-soft" d="M235 281 C320 281 350 279 450 279 L450 299 C350 299 320 284 235 284 Z" />
+        <path class="flow-ribbon" d="M235 287 C320 287 350 329 450 329 L450 346 C350 346 320 290 235 290 Z" />
+        <path class="flow-ribbon" d="M235 293 C320 293 350 381 450 381 L450 394 C350 394 320 296 235 296 Z" />
+        <path class="flow-ribbon flow-soft" d="M235 299 C320 299 350 433 450 433 L450 443 C350 443 320 302 235 302 Z" />
+
+        <path class="flow-ribbon flow-soft" d="M620 88 L620 97 C710 97 750 257 828 257 L828 260 C750 260 710 106 620 106 Z" />
+        <path class="flow-ribbon" d="M620 134 L620 148 C710 148 750 263 828 263 L828 266 C750 266 710 162 620 162 Z" />
+        <path class="flow-ribbon flow-soft" d="M620 184 L620 192 C710 192 750 269 828 269 L828 272 C750 272 710 200 620 200 Z" />
+        <path class="flow-ribbon" d="M620 229 L620 253 C710 253 750 275 828 275 L828 278 C750 278 710 277 620 277 Z" />
+        <path class="flow-ribbon" d="M620 279 L620 299 C710 299 750 281 828 281 L828 284 C750 284 710 319 620 319 Z" />
+        <path class="flow-ribbon flow-soft" d="M620 330 L620 342 C710 342 750 287 828 287 L828 290 C750 290 710 354 620 354 Z" />
+        <path class="flow-ribbon" d="M620 381 L620 396 C710 396 750 293 828 293 L828 296 C750 296 710 411 620 411 Z" />
+        <path class="flow-ribbon flow-soft" d="M620 432 L620 450 C710 450 750 299 828 299 L828 302 C750 302 710 468 620 468 Z" />
+
+        <rect x="28" y="212" width="207" height="140" rx="3" class="flow-node" />
+        <rect x="28" y="212" width="7" height="140" class="flow-accent" />
+        <text x="55" y="244" class="flow-kicker">POLITICAL LEADER</text>
+        <text x="55" y="280" class="flow-copy">
+          <tspan x="55" dy="0">“Lower the cost</tspan>
+          <tspan x="55" dy="23">of family life.”</tspan>
+        </text>
+        <text x="55" y="333" class="flow-small">One intended statement</text>
+
+        <rect x="450" y="78" width="170" height="36" rx="3" class="flow-node" />
+        <text x="465" y="101" class="flow-label">News &amp; television</text>
+        <rect x="450" y="128" width="170" height="40" rx="3" class="flow-node" />
+        <text x="465" y="153" class="flow-label">YouTube / long-form</text>
+        <rect x="450" y="178" width="170" height="30" rx="3" class="flow-node" />
+        <text x="465" y="198" class="flow-label">Podcasts</text>
+        <rect x="450" y="222" width="170" height="62" rx="3" class="flow-node" />
+        <text x="465" y="247" class="flow-label">Shorts / Reels</text>
+        <text x="465" y="266" class="flow-small">TikTok · Instagram</text>
+        <rect x="450" y="272" width="170" height="55" rx="3" class="flow-node" />
+        <text x="465" y="296" class="flow-label">Creators</text>
+        <text x="465" y="314" class="flow-small">Commentators</text>
+        <rect x="450" y="322" width="170" height="40" rx="3" class="flow-node" />
+        <text x="465" y="347" class="flow-label">Feeds / search</text>
+        <rect x="450" y="374" width="170" height="45" rx="3" class="flow-node" />
+        <text x="465" y="402" class="flow-label">Group chats / DMs</text>
+        <rect x="450" y="425" width="170" height="50" rx="3" class="flow-node" />
+        <text x="465" y="455" class="flow-label">Personal conversations</text>
+
+        <rect x="828" y="212" width="160" height="140" rx="3" class="flow-node" />
+        <rect x="828" y="212" width="7" height="140" class="flow-accent" />
+        <text x="855" y="244" class="flow-kicker">VOTER</text>
+        <text x="855" y="280" class="flow-copy">
+          <tspan x="855" dy="0">“What does this</tspan>
+          <tspan x="855" dy="23">mean for me?”</tspan>
+        </text>
+        <text x="855" y="333" class="flow-small">One political judgment</text>
+
+        <path class="flow-ribbon" d="M988 280 C1010 280 1015 281 1038 281 L1038 289 C1015 289 1010 286 988 286 Z" />
+        <rect x="1038" y="250" width="48" height="70" rx="3" class="flow-node" />
+        <rect x="1038" y="250" width="8" height="70" class="flow-accent" />
+        <text x="1062" y="348" text-anchor="middle" class="flow-small">RESULT</text>
+
+        <text x="275" y="520" class="flow-kicker">VOLUME MULTIPLIES</text>
+        <text x="665" y="520" class="flow-kicker">MEANING CHANGES</text>
+      </svg>
+
+      <div class="transit-flow-mobile">
+        <div><span>01</span><strong>One statement</strong><p>A political leader introduces one intended message.</p></div>
+        <div><span>02</span><strong>Expanding circulation</strong><p>Media, platforms and conversations multiply and transform it.</p></div>
+        <div><span>03</span><strong>One judgment</strong><p>The voter receives a newly weighted mixture. The poll records the result.</p></div>
+      </div>
+    </div>
 
         <div class="transit-close">
           <p>Polls measure the result.</p>
