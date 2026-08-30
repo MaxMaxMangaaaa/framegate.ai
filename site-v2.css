@@ -49,8 +49,9 @@ em { color: var(--pink); font-style: normal; }
   border-bottom: 1px solid rgba(13, 14, 17, .13);
   backdrop-filter: blur(16px);
 }
-.brand { display: flex; align-items: center; gap: 11px; }
+.brand { display: flex; align-items: center; gap: 12px; }
 .brand img { width: 34px; height: 34px; object-fit: contain; }
+.brand img.brand-wordmark { width: 132px; height: auto; mix-blend-mode: multiply; filter: contrast(1.22); }
 .brand span { font-size: 11px; font-weight: 800; letter-spacing: .18em; }
 .header-cta {
   display: inline-flex;
@@ -392,6 +393,7 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 @media (max-width: 720px) {
   .site-header { height: 68px; padding: 0 18px; }
   .brand img { width: 30px; height: 30px; }
+  .brand img.brand-wordmark { width: 112px; height: auto; }
   .brand span { font-size: 8px; letter-spacing: .14em; }
   .header-cta { font-size: 0; }
   .hero { min-height: calc(100vh - 68px); padding: 70px 20px 60px; align-items: flex-start; }
