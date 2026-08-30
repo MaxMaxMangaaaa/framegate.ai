@@ -378,6 +378,7 @@ em { color: var(--pink); font-style: normal; }
 footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; background: var(--ink); color: var(--white); }
 .footer-brand { display: flex; align-items: center; gap: 12px; }
 .footer-brand img { width: 42px; height: 42px; object-fit: contain; }
+.footer-brand img.footer-wordmark { width: 155px; height: auto; mix-blend-mode: screen; filter: invert(1) contrast(1.22); }
 .footer-brand span { font-size: 11px; font-weight: 800; letter-spacing: .18em; }
 .footer-links { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 14px 28px; color: #a9abb1; font-size: 12px; }
 .footer-links a:hover { color: var(--pink); }
