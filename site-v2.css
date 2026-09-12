@@ -1160,3 +1160,23 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .founder-copy h2 { font-size: clamp(29px, 8.4vw, 42px); }
   .header-cta { font-size: 12px; white-space: nowrap; }
 }
+
+/* Source coverage: keep the registry separate from the dated study. */
+#in-transit { scroll-margin-top: 74px; }
+.source-evidence h2 { line-height: 1.06; }
+.source-lead { max-width: 930px; margin: 32px 0 0; color: #dedee2; font-size: clamp(18px, 1.7vw, 24px); line-height: 1.55; }
+.source-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; border-top: 1px solid #85868c; border-bottom: 1px solid #85868c; }
+.source-stats article { padding: 30px 26px; border-left: 1px solid #777980; }
+.source-stats article:first-child { padding-left: 0; border-left: 0; }
+.source-stats strong { display: block; color: #ff6cac; font-size: clamp(34px, 4.4vw, 64px); font-weight: 650; line-height: 1.05; letter-spacing: -.05em; }
+.source-stats span { display: block; margin-top: 20px; font-size: 16px; line-height: 1.4; font-weight: 600; }
+.source-stats small { display: block; max-width: 300px; margin-top: 9px; color: #c8c9cd; font-size: 13px; line-height: 1.5; }
+.source-outcome { max-width: 930px; margin: 36px 0 0; color: #dedee2; font-size: clamp(18px, 1.7vw, 24px); line-height: 1.55; }
+.source-outcome strong { color: #fff; font-weight: 650; }
+.source-note { max-width: 930px; margin: 20px 0 0; color: #c8c9cd; font-size: 12px; line-height: 1.6; }
+@media (max-width: 720px) {
+  .source-stats { grid-template-columns: 1fr; margin-top: 32px; }
+  .source-stats article, .source-stats article:first-child { padding: 24px 0; border-left: 0; border-bottom: 1px solid #777980; }
+  .source-stats article:last-child { border-bottom: 0; }
+  .source-stats span { margin-top: 12px; }
+}
