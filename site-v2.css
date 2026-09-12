@@ -694,3 +694,22 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   font-weight: 750;
   letter-spacing: -.01em;
 }
+
+
+.hero-subtitle {
+  max-width: 1120px;
+  margin: 30px 0 0;
+  color: var(--ink);
+  font-size: clamp(31px, 4.3vw, 66px);
+  line-height: .98;
+  letter-spacing: -.052em;
+  font-weight: 620;
+}
+
+@media (max-width: 560px) {
+  .hero-subtitle {
+    margin-top: 24px;
+    font-size: clamp(30px, 9vw, 44px);
+    line-height: 1.02;
+  }
+}
