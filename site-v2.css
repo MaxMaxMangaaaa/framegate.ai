@@ -1098,3 +1098,13 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
     font-size: clamp(30px, 9.75vw, 47px);
   }
 }
+
+
+.role-audience {
+  margin: 0 0 18px;
+  color: var(--pink);
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.3;
+  font-weight: 500;
+  letter-spacing: 0;
+}
