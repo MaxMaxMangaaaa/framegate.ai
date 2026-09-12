@@ -1365,3 +1365,8 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .case-phone-card .phone-report { min-height: 0; flex: 1; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-color: #b9bbc3 #fff; }
 .case-brief-card .brief-window p > strong { color: #171719; }
 .case-brief-card .brief-window p + p > strong:last-child { color: #bc185e; }
+
+/* Plain-language alert: regular-weight prose without pink accents or a colored panel. */
+.case-brief-card .brief-alert { margin: 0 0 20px; padding: 0; border: 0; background: transparent; color: #414247; font-size: 14px; font-weight: 400; line-height: 1.5; }
+.case-brief-card .brief-alert p { margin: 0; font-size: inherit; font-weight: 400; color: inherit; }
+.case-brief-card .brief-alert .brief-alert-label { margin-bottom: 10px; }
