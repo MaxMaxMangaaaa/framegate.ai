@@ -1332,3 +1332,13 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .campaign-brief { font-size: 13px; }
   .brief-window { padding: 10px; }
 }
+
+/* The full advisor briefing scrolls inside the phone, with the app header fixed. */
+.case-brief-card .phone-screen { display: flex; flex-direction: column; padding-bottom: 24px; }
+.case-brief-card .phone-status, .case-brief-card .campaign-screen-header { flex-shrink: 0; }
+.case-brief-card .phone-report { min-height: 0; flex: 1; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-color: #b9bbc3 #fff; }
+.case-brief-card .phone-report:focus-visible { outline: 2px solid var(--pink); outline-offset: -3px; }
+.case-brief-card .brief-intro { margin: 0 0 20px; color: #414247; font-size: 14px; line-height: 1.5; }
+.case-brief-card .campaign-brief p { margin: 18px 0; }
+.case-brief-card .brief-action strong { font-size: 16px; line-height: 1.4; }
+.brief-prepare { display: block; width: 100%; padding: 14px 12px; margin: 22px 0 16px; border: 0; border-radius: 12px; background: var(--pink); color: white; font: inherit; font-weight: 650; opacity: 1; -webkit-text-fill-color: white; cursor: default; }
