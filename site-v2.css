@@ -1342,3 +1342,12 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .case-brief-card .campaign-brief p { margin: 18px 0; }
 .case-brief-card .brief-action strong { font-size: 16px; line-height: 1.4; }
 .brief-prepare { display: block; width: 100%; padding: 14px 12px; margin: 22px 0 16px; border: 0; border-radius: 12px; background: var(--pink); color: white; font: inherit; font-weight: 650; opacity: 1; -webkit-text-fill-color: white; cursor: default; }
+
+/* Smaller briefing device with a persistent scroll cue. Other phones stay unchanged. */
+.case-phone-card.case-brief-card { width: min(80%, 304px); align-self: start; }
+.case-brief-card .phone-shell { width: 100%; zoom: .8; }
+.case-brief-card .phone-report h3 { font-size: 21px; }
+.brief-scroll-hint { flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 7px; margin: 0; padding: 10px 8px; background: #fff0f6; color: #a51353; font-size: 12px; font-weight: 600; line-height: 1.4; text-align: center; border-bottom: 1px solid #f4cbdc; }
+.brief-scroll-hint span { font-size: 17px; }
+@media (max-width: 800px) { .case-phone-card.case-brief-card { width: min(80%, 280px); } }
+@media (max-width: 380px) { .case-brief-card .phone-report h3 { font-size: 18.75px; } }
