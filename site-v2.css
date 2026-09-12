@@ -1108,3 +1108,8 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   font-weight: 500;
   letter-spacing: 0;
 }
+
+
+.final-cta h2 .cta-primary {
+  color: var(--pink);
+}
