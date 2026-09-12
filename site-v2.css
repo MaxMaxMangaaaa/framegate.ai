@@ -1117,7 +1117,7 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 
 /* September 2026 wordmark paired with the original Framegate symbol. */
 .brand img.brand-wordmark {
-  width: 150px;
+  width: 112.5px;
   height: auto;
   filter: none;
   mix-blend-mode: multiply;
@@ -1129,13 +1129,13 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   mix-blend-mode: multiply;
 }
 .footer-brand img.footer-wordmark {
-  width: 180px;
+  width: 135px;
   height: auto;
   filter: grayscale(1) invert(1);
   mix-blend-mode: screen;
 }
 @media (max-width: 720px) {
-  .brand img.brand-wordmark { width: 125px; height: auto; }
+  .brand img.brand-wordmark { width: 93.75px; height: auto; }
   .hero-mark { width: 85vw; right: -16vw; top: 12%; }
 }
 
