@@ -1311,3 +1311,24 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .phone-report h3 { font-size: 25px; }
   .phone-report-description { font-size: 15px; }
 }
+
+/* Illustrative, personalized briefing; scenario probability is not a measured forecast. */
+.case-phone-card .phone-screen { height: 810px; }
+.case-brief-card .phone-report { padding-top: 24px; }
+.case-brief-card .phone-report-name { margin-bottom: 12px; font-size: 11px; }
+.case-brief-card .phone-report h3 { margin-bottom: 20px; }
+.campaign-brief { font-size: 14px; line-height: 1.45; color: #414247; }
+.brief-signal { margin: 18px 0 14px; }
+.brief-signal strong, .brief-action strong { color: #171719; font-weight: 650; }
+.brief-window { padding: 12px; background: #f7f8fc; border-left: 3px solid var(--pink); }
+.brief-window p { margin: 0; }
+.brief-window p + p { margin-top: 8px; }
+.brief-window p + p > strong { color: #bc185e; font-weight: 700; }
+.brief-window span { display: block; margin-top: 3px; color: #606065; font-size: 11px; line-height: 1.4; }
+.brief-action { margin: 14px 0 12px; }
+.brief-action > strong { display: block; margin-bottom: 3px; }
+.case-brief-card .phone-report-link { font-size: 13px; }
+@media (max-width: 380px) {
+  .campaign-brief { font-size: 13px; }
+  .brief-window { padding: 10px; }
+}
