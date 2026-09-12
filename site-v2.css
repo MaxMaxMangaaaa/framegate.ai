@@ -1235,3 +1235,46 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .product-evidence-stats strong { font-size: 40px; }
   .product-evidence-stats article:last-child strong { font-size: 30px; }
 }
+
+/* Responsive, code-native iPhone-style product mockup; no simulated live chat. */
+.product-device-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(340px, .9fr); align-items: center; gap: clamp(36px, 7vw, 100px); }
+.product-device-copy h2 { margin: 0; max-width: 610px; font-size: clamp(36px, 4.8vw, 68px); line-height: 1.06; letter-spacing: -.055em; font-weight: 650; }
+.product-device-copy h2 em { display: block; }
+.phone-preview { width: min(100%, 380px); justify-self: center; }
+.phone-shell { position: relative; padding: 9px; border: 2px solid #67696e; border-radius: 55px; background: #191a1e; box-shadow: 0 2px 0 #c5c5c8 inset, 0 26px 65px rgba(27,29,37,.19), 0 4px 12px rgba(27,29,37,.12); }
+.phone-shell::before { content: ""; position: absolute; width: 3px; height: 65px; right: -5px; top: 160px; border-radius: 0 3px 3px 0; background: #6b6c71; }
+.phone-shell::after { content: ""; position: absolute; width: 3px; height: 42px; left: -5px; top: 140px; border-radius: 3px 0 0 3px; background: #6b6c71; box-shadow: 0 55px 0 #6b6c71; }
+.phone-screen { position: relative; overflow: hidden; height: 730px; border-radius: 44px; background: #fff; }
+.phone-status { position: relative; height: 59px; padding: 20px 25px 0; display: flex; justify-content: space-between; align-items: flex-start; color: #151518; font-size: 12px; font-weight: 650; }
+.phone-island { position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 106px; height: 29px; border-radius: 20px; background: #131316; }
+.phone-status-icons { display: flex; gap: 7px; align-items: center; font-size: 9px; }
+.phone-battery { display: inline-block; width: 20px; height: 10px; border: 1px solid #333; border-radius: 3px; background: linear-gradient(to right,#333 80%,transparent 80%); }
+.phone-preview .campaign-screen { border: 0; border-radius: 0; box-shadow: none; }
+.phone-preview .campaign-screen-header { min-height: 66px; padding: 14px; gap: 9px; }
+.phone-preview .campaign-screen-brand { gap: 8px; }
+.phone-preview .campaign-screen-brand img { width: 22px; height: 30px; }
+.phone-preview .campaign-screen-brand span { font-size: 18px; letter-spacing: -.04em; }
+.phone-preview .campaign-screen-account { padding: 6px 10px; font-size: 12px; }
+.phone-preview .campaign-screen-body { min-height: 530px; display: flex; flex-direction: column; justify-content: center; padding: 36px 17px 65px; }
+.phone-preview .campaign-screen-title { font-size: 29px; line-height: 1.13; margin: 0 0 28px; letter-spacing: -.045em; }
+.phone-preview .campaign-screen-prompt { gap: 10px; padding: 16px 13px; border-radius: 25px; align-items: flex-end; }
+.phone-preview .campaign-screen-prompt p { font-size: 16px; line-height: 1.5; }
+.phone-preview .campaign-screen-plus { font-size: 25px; line-height: 31px; }
+.phone-preview .campaign-screen-send { width: 31px; height: 31px; font-size: 23px; }
+.phone-preview .campaign-screen-hint { font-size: 14px; line-height: 1.45; margin-top: 24px; }
+.phone-home-indicator { position: absolute; bottom: 9px; left: 50%; transform: translateX(-50%); width: 115px; height: 5px; background: #171719; border-radius: 5px; }
+.phone-preview figcaption { text-align: center; font-size: 11px; line-height: 1.6; max-width: 320px; margin: 20px auto 0; }
+@media (max-width: 800px) {
+  .product-device-layout { grid-template-columns: 1fr; gap: 36px; }
+  .product-device-copy h2 { font-size: clamp(30px, 8.4vw, 48px); max-width: 610px; }
+  .phone-preview { width: min(100%, 350px); }
+  .phone-screen { height: 680px; }
+  .phone-preview .campaign-screen-body { min-height: 490px; }
+}
+@media (max-width: 380px) {
+  .phone-preview .campaign-screen-header { padding: 12px 10px; }
+  .phone-preview .campaign-screen-brand span { font-size: 16px; }
+  .phone-preview .campaign-screen-account { font-size: 11px; padding: 6px 8px; }
+  .phone-preview .campaign-screen-body { padding-left: 12px; padding-right: 12px; }
+  .phone-preview .campaign-screen-prompt { gap: 8px; padding-left: 10px; padding-right: 10px; }
+}
