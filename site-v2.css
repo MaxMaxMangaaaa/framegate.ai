@@ -1388,3 +1388,13 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .case-brief-card .brief-steps li { padding-left: 5px; margin: 0 0 18px; }
 .case-brief-card .brief-steps li:last-child { margin-bottom: 0; }
 .case-brief-card .brief-steps li::marker { color: #414247; font-weight: 400; }
+
+/* Affordability briefing: original overall chart followed by January detail. */
+#affordability-briefing .affordability-chart-heading { margin: 0 0 8px; color: #171719; font-size: 13px; font-weight: 600; line-height: 1.35; }
+#affordability-briefing .affordability-chart-link { margin: 7px 0 20px; }
+#affordability-briefing .affordability-month-chart { margin: 0 0 20px; padding: 10px 8px; border: 1px solid #e1e1e8; border-radius: 6px; background: #f7f8fc; }
+#affordability-briefing .cc-chart-title { margin: 0 0 5px; color: #171719; font-size: 13px; font-weight: 600; line-height: 1.35; }
+#affordability-briefing .cc-chart-sub { margin: 0 0 4px; color: #606065; font-size: 11px; line-height: 1.4; }
+#affordability-briefing .affordability-month-chart svg { display: block; width: 100%; height: 190px; overflow: visible; }
+#affordability-briefing .cc-chart-note { max-width: none; margin: 7px 0 0; text-align: left; color: #606065; font-size: 11px; line-height: 1.5; }
+#affordability-briefing .campaign-brief h4 { color: #171719; font-size: 16px; line-height: 1.4; margin: 0 0 12px; font-weight: 650; }
