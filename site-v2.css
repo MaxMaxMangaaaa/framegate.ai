@@ -1370,3 +1370,14 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .case-brief-card .brief-alert { margin: 0 0 20px; padding: 0; border: 0; background: transparent; color: #414247; font-size: 14px; font-weight: 400; line-height: 1.5; }
 .case-brief-card .brief-alert p { margin: 0; font-size: inherit; font-weight: 400; color: inherit; }
 .case-brief-card .brief-alert .brief-alert-label { margin-bottom: 10px; }
+
+/* A single pink rule connects the alert and its recommended urgency. */
+.case-brief-card .brief-alert { border-left: 3px solid var(--pink); padding-left: 12px; }
+.case-brief-card .brief-alert .brief-urgency { margin-top: 16px; margin-bottom: 0; }
+.case-brief-card .brief-alert .brief-urgency strong { color: #171719; font-weight: 650; }
+/* Smaller app branding with a role-specific view in both analysis devices. */
+.case-phone-card .campaign-screen-brand { gap: 7px; }
+.case-phone-card .campaign-screen-brand img { width: 17.6px; height: 24px; flex-shrink: 0; }
+.case-phone-card .campaign-brand-copy { display: flex; flex-direction: column; min-width: 0; gap: 4px; }
+.case-phone-card .campaign-brand-copy .campaign-brand-name { font-size: 14.4px; line-height: 1.15; font-weight: 650; letter-spacing: -.035em; }
+.case-phone-card .campaign-brand-copy .campaign-brand-role { font-size: 10px; line-height: 1.3; font-weight: 400; letter-spacing: 0; color: #606065; }
