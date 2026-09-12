@@ -1444,3 +1444,11 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   #outcomes .audience-tabs button { grid-column: span 2; min-width: 0; padding: 10px 4px; font-size: 14px; }
   #outcomes .audience-tabs button:nth-child(-n+2) { grid-column: span 3; }
 }
+
+/* Demo CTA: explain the LinkedIn handoff and keep the header readable on phones. */
+.demo-contact-note { max-width: 620px; margin: 16px 0 0; color: #dedee2; font-size: 15px; line-height: 1.6; }
+@media (max-width: 720px) {
+  .site-header { gap: 12px; }
+  .header-cta { max-width: 138px; white-space: normal; line-height: 1.3; }
+  .header-cta > span { flex-shrink: 0; }
+}
