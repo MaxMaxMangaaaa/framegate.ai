@@ -477,3 +477,189 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .legal-content section { grid-template-columns: 1fr; gap: 12px; }
   .legal-footer { flex-direction: column; }
 }
+
+
+/* Benefit-led product, audience outcome and economics sections */
+.product-section,
+.outcomes-section,
+.economics-section {
+  padding: clamp(100px, 13vw, 185px) clamp(24px, 7vw, 112px);
+}
+
+.product-section { background: var(--paper); }
+.outcomes-section { background: var(--ink); color: var(--white); }
+.economics-section { background: var(--surface); }
+
+.product-intro,
+.feature-grid,
+.outcomes-intro,
+.outcome-grid,
+.economics-intro,
+.economics-compare,
+.economics-note {
+  max-width: 1340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-intro h2,
+.outcomes-intro h2,
+.economics-intro h2 {
+  max-width: 1160px;
+  margin: 0;
+  font-size: clamp(40px, 5.5vw, 86px);
+  line-height: .92;
+  letter-spacing: -.064em;
+  font-weight: 640;
+}
+
+.product-intro > p,
+.economics-intro > p {
+  max-width: 780px;
+  margin: 42px 0 0 auto;
+  color: var(--slate);
+  font-size: clamp(18px, 1.9vw, 26px);
+  line-height: 1.45;
+  letter-spacing: -.015em;
+}
+
+.feature-grid {
+  margin-top: clamp(75px, 8vw, 115px);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.feature-grid article {
+  min-height: 260px;
+  padding: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.feature-grid article:first-child { border-left: 0; }
+.feature-grid article > span,
+.outcome-grid article > span,
+.economics-compare article > span {
+  color: var(--pink);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .17em;
+}
+.feature-grid h3,
+.economics-compare h3 {
+  margin: 54px 0 18px;
+  font-size: clamp(25px, 2.5vw, 38px);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.feature-grid p,
+.economics-compare p {
+  margin: 0;
+  color: var(--slate);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.outcome-grid {
+  margin-top: clamp(75px, 8vw, 115px);
+  border-top: 1px solid #777980;
+}
+
+.outcome-grid article {
+  min-height: 190px;
+  display: grid;
+  grid-template-columns: 60px minmax(190px, .55fr) minmax(230px, .8fr) 1.2fr;
+  gap: 28px;
+  align-items: center;
+  border-bottom: 1px solid #5d5f66;
+}
+
+.outcome-grid h3,
+.outcome-grid strong,
+.outcome-grid p { margin: 0; }
+
+.outcome-grid h3 {
+  font-size: clamp(21px, 2vw, 31px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.outcome-grid strong {
+  color: var(--white);
+  font-size: clamp(18px, 1.55vw, 24px);
+  line-height: 1.25;
+}
+
+.outcome-grid p {
+  color: #c8c9cd;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.economics-compare {
+  margin-top: clamp(75px, 8vw, 115px);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.economics-compare article {
+  min-height: 330px;
+  padding: 32px;
+}
+
+.economics-before {
+  border-right: 1px solid var(--ink);
+  background: rgba(255,255,255,.2);
+}
+
+.economics-after { background: var(--paper); }
+.economics-after h3 { color: var(--pink); }
+
+.economics-note {
+  margin-top: 36px;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .feature-grid,
+  .economics-compare { grid-template-columns: 1fr; }
+
+  .feature-grid article {
+    min-height: 0;
+    border-left: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .feature-grid article:last-child { border-bottom: 0; }
+
+  .outcome-grid article {
+    padding: 30px 0;
+    grid-template-columns: 42px 1fr;
+  }
+
+  .outcome-grid strong,
+  .outcome-grid p { grid-column: 2; }
+
+  .economics-before {
+    border-right: 0;
+    border-bottom: 1px solid var(--ink);
+  }
+}
+
+@media (max-width: 560px) {
+  .product-intro h2,
+  .outcomes-intro h2,
+  .economics-intro h2 {
+    font-size: clamp(37px, 12vw, 58px);
+  }
+
+  .outcome-grid article {
+    grid-template-columns: 32px 1fr;
+    gap: 14px;
+  }
+}
