@@ -131,28 +131,275 @@
 
 
 
-  <section class="advantage-section" id="why-framegate">
-    <div class="advantage-intro">
-      <h2>Less overhead. <em>More campaign.</em></h2>
-    </div>
-    <div class="advantage-copy">
-      <p>Framegate connects what political consulting usually separates: public opinion, polling, issues, opponents, media, creators, organizations, candidates and individual messages. It follows every political question from the national climate to the district—and from the first signal to the words you publish.</p>
-      <p>One political professional can perform work previously distributed across pollsters, researchers, strategists, opposition analysts, media consultants, speechwriters and content teams. That means fewer providers, fewer tools, fewer meetings and fewer people handling confidential plans. Decisions become faster, execution becomes easier and professional campaigning becomes dramatically less expensive.</p>
-      <p>Framegate does not replace political judgment. It gives decision-makers a complete political picture, shows the evidence behind every recommendation and turns their decisions into coordinated action. <strong>Your judgment remains human. Your capabilities multiply.</strong></p>
-    </div>
-  </section>
+<section id="framegate-campaign-flow" aria-label="CampaignConsult: understand the debate, manage the campaign, create communication">
+<style>
+#framegate-campaign-flow{--flow-bg:#414247;--flow-fg:#f7f8fc;--flow-muted:#d6d6de;width:100%;box-sizing:border-box;background:var(--flow-bg);color:var(--flow-fg);font-family:Arial,Helvetica,sans-serif;padding:0 28px 34px}
+#framegate-campaign-flow *{box-sizing:border-box}
+#framegate-campaign-flow .flow-nav{height:70px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff24;margin-bottom:36px;font-size:13px}
+#framegate-campaign-flow .flow-nav-brand{font-size:21px;font-weight:700;letter-spacing:-.7px;display:flex;align-items:center;gap:10px}
+#framegate-campaign-flow .flow-nav-brand img{width:22px;height:30px;object-fit:contain}
+#framegate-campaign-flow .flow-heading{font-size:42px;line-height:1.07;letter-spacing:-1.7px;margin:0 0 40px;font-weight:650}
+#framegate-campaign-flow .flow-heading em{font-style:normal;color:#e7227a}
+#framegate-campaign-flow .flow-layout{display:grid;grid-template-columns:minmax(0,1fr) 72px 350px 72px minmax(0,1fr);align-items:center}
+#framegate-campaign-flow .flow-side{min-width:0;align-self:start;text-align:left}
+#framegate-campaign-flow .flow-side h3{font-size:25px;line-height:1.13;letter-spacing:-.7px;font-weight:650;margin:0 0 28px;color:var(--flow-fg)}
+#framegate-campaign-flow .flow-group{min-height:132px;padding:17px 0;border-top:1px solid #ffffff30}
+#framegate-campaign-flow .flow-group h4{font-size:16px;line-height:1.3;font-weight:700;margin:0 0 7px;color:var(--flow-fg)}
+#framegate-campaign-flow .flow-group p{font-size:14px;line-height:1.55;margin:0;color:var(--flow-muted)}
+#framegate-campaign-flow .flow-foot{margin:19px 0 0;font-size:12px;line-height:1.6;color:var(--flow-muted)}
+#framegate-campaign-flow .flow-arrow{position:relative;width:34px;height:6px;justify-self:center;background:#e7227a;border-radius:1px}
+#framegate-campaign-flow .flow-arrow:after{content:"";position:absolute;right:-1px;top:-7px;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:13px solid #e7227a}
+#framegate-campaign-flow .flow-phone{min-width:0}
+#framegate-campaign-flow #campaign-iphone-evidence{padding:0}
+#framegate-campaign-flow #campaign-iphone-evidence .case-phone-card{width:100%}
+#framegate-campaign-flow #campaign-iphone-evidence .case-phone-card>figcaption{color:var(--flow-muted)}
+@media(max-width:899px){
+#framegate-campaign-flow{padding:0 22px 30px}
+#framegate-campaign-flow .flow-layout{grid-template-columns:1fr;gap:30px}
+#framegate-campaign-flow .flow-heading{font-size:34px;margin-bottom:30px}
+#framegate-campaign-flow .flow-side{width:100%;max-width:440px;justify-self:center}
+#framegate-campaign-flow .flow-phone{width:min(100%,350px);justify-self:center}
+#framegate-campaign-flow .flow-side h3{font-size:25px;margin-bottom:22px}
+#framegate-campaign-flow .flow-arrow{transform:rotate(90deg);margin:15px 0}
+#framegate-campaign-flow .flow-nav{margin-bottom:28px}
+}
+#framegate-campaign-flow.mobile-preview{max-width:390px;margin:auto}
+#framegate-campaign-flow.mobile-preview{padding:0 20px 30px}
+#framegate-campaign-flow.mobile-preview .flow-layout{grid-template-columns:1fr;gap:30px}
+#framegate-campaign-flow.mobile-preview .flow-heading{font-size:34px;margin-bottom:30px}
+#framegate-campaign-flow.mobile-preview .flow-side{width:100%;justify-self:center}
+#framegate-campaign-flow.mobile-preview .flow-phone{width:min(100%,350px);justify-self:center}
+#framegate-campaign-flow.mobile-preview .flow-side h3{font-size:25px;margin-bottom:22px}
+#framegate-campaign-flow.mobile-preview .flow-arrow{transform:rotate(90deg);margin:15px 0}
+#framegate-campaign-flow.mobile-preview .flow-nav{margin-bottom:28px}
+
+#framegate-campaign-flow{padding:80px max(28px,calc((100% - 1200px)/2)) 70px;scroll-margin-top:90px}
+#framegate-campaign-flow .flow-heading{color:#fff;font-style:normal;font-size:clamp(32px,4vw,56px);margin-bottom:80px;line-height:1.1;letter-spacing:-.045em}
+#framegate-campaign-flow .flow-heading span{color:#e7227a;font-style:normal}
+#framegate-campaign-flow .flow-side{padding-top:0}
+#framegate-campaign-flow .flow-group{min-height:148px}
+#framegate-campaign-flow .flow-foot{line-height:1.65}
+@media(min-width:1200px){#framegate-campaign-flow .flow-layout{grid-template-columns:minmax(0,1fr) 88px 380px 88px minmax(0,1fr)}}
+@media(max-width:899px){#framegate-campaign-flow{padding:50px 24px}#framegate-campaign-flow .flow-heading{margin-bottom:52px}#framegate-campaign-flow .flow-group{min-height:0;padding:19px 0}}
+</style>
+<span id="why-framegate" aria-hidden="true"></span>
+<h2 class="flow-heading">Your entire campaign operation.<br><span>Steered with a thumb.</span></h2>
+<div class="flow-layout">
+<aside class="flow-side" aria-label="Understand the debate">
+<h3>Understand<br>the debate.</h3>
+<div class="flow-group"><h4>Voters &amp; issues</h4><p>What matters to voters.<br>Where the debate is heating up.</p></div>
+<div class="flow-group"><h4>Messages &amp; reach</h4><p>Which positions gain ground.<br>Who carries your message beyond your core.</p></div>
+<div class="flow-group"><h4>Support &amp; opposition</h4><p>Who backs your proposal.<br>Who challenges it, including inside your party.</p></div>
+<p class="flow-foot">YouTube · TikTok · X · Instagram · Press<br>Television · Journalism · Official communications</p>
+<p class="flow-foot">National · State · Regional · District</p>
+</aside>
+<span class="flow-arrow flow-arrow-in" aria-hidden="true"></span><div class="flow-phone">
+<section id="campaign-iphone-evidence" aria-label="CampaignConsult iPhone briefing preview">
+<style>
+#campaign-iphone-evidence{width:100%;padding:22px 8px 18px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+#campaign-iphone-evidence *{box-sizing:border-box}
+#campaign-iphone-evidence .case-phone-card{width:min(100%,380px);margin:0 auto}
+#campaign-iphone-evidence .phone-shell{position:relative;width:100%;aspect-ratio:78/163.4;display:flex;flex-direction:column;padding:9px;border:2px solid #67696e;border-radius:55px;background:#191a1e;box-shadow:0 2px 0 #c5c5c8 inset,0 28px 60px #00000030}
+#campaign-iphone-evidence .phone-shell:before{content:"";position:absolute;width:3px;height:65px;right:-5px;top:160px;border-radius:0 3px 3px 0;background:#6b6c71}
+#campaign-iphone-evidence .phone-shell:after{content:"";position:absolute;width:3px;height:42px;left:-5px;top:140px;border-radius:3px 0 0 3px;background:#6b6c71;box-shadow:0 55px 0 #6b6c71}
+#campaign-iphone-evidence .phone-screen{position:relative;overflow:hidden;border-radius:44px;background:#fff;color:#171719;min-height:0;flex:1;display:flex;flex-direction:column;padding-bottom:24px}
+#campaign-iphone-evidence .phone-status{position:relative;height:59px;padding:20px 25px 0;display:flex;justify-content:space-between;align-items:flex-start;font-size:12px;font-weight:650;flex-shrink:0}
+#campaign-iphone-evidence .phone-island{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:106px;height:29px;border-radius:20px;background:#131316}
+#campaign-iphone-evidence .phone-status-icons{display:flex;gap:7px;align-items:center;font-size:9px}
+#campaign-iphone-evidence .phone-battery{display:inline-block;width:20px;height:10px;border:1px solid #333;border-radius:3px;background:linear-gradient(to right,#333 80%,transparent 80%)}
+#campaign-iphone-evidence .campaign-screen-header{display:flex;justify-content:space-between;align-items:center;gap:9px;min-height:66px;padding:14px;border-bottom:1px solid #e1e1e8;background:#f7f7fa;flex-shrink:0}
+#campaign-iphone-evidence .campaign-screen-brand{display:flex;align-items:center;gap:7px;min-width:0}
+#campaign-iphone-evidence .campaign-screen-brand img{width:17.6px;height:24px;object-fit:contain;flex-shrink:0}
+#campaign-iphone-evidence .campaign-brand-copy{display:flex;flex-direction:column;min-width:0;gap:4px}
+#campaign-iphone-evidence .campaign-brand-name{font-size:14.4px;line-height:1.15;font-weight:650;letter-spacing:-.035em}
+#campaign-iphone-evidence .campaign-brand-role{font-size:10px;line-height:1.3;color:#606065}
+#campaign-iphone-evidence .campaign-screen-account{padding:6px 10px;border:1px solid #d9d9e1;border-radius:30px;background:#fff;color:#555;font-size:12px}
+#campaign-iphone-evidence .brief-scroll-hint{flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:7px;margin:0;padding:10px 8px;background:#fff0f6;color:#a51353;font-size:12px;font-weight:600;line-height:1.4;text-align:center;border-bottom:1px solid #f4cbdc}
+#campaign-iphone-evidence .brief-scroll-hint span{font-size:17px}
+#campaign-iphone-evidence .phone-report{padding:24px 15px 35px;min-height:0;flex:1;overflow-y:auto;overscroll-behavior-y:contain;scrollbar-width:thin;scrollbar-color:#b9bbc3 #fff}
+#campaign-iphone-evidence .phone-report-name{margin:0 0 12px;color:#606065;font-size:11px;line-height:1.4}
+#campaign-iphone-evidence .report-question{margin:0 0 20px;font-size:21px;line-height:1.12;letter-spacing:-.04em;font-weight:650}
+#campaign-iphone-evidence .brief-alert{background:#f2f2f4;border-left:3px solid #e7227a;padding:14px 12px;margin:0 0 20px;color:#414247;font-size:14px;line-height:1.5}
+#campaign-iphone-evidence .brief-alert p{margin:0}
+#campaign-iphone-evidence .brief-alert p+p{margin-top:10px}
+#campaign-iphone-evidence .phone-home-indicator{position:absolute;bottom:9px;left:50%;transform:translateX(-50%);width:115px;height:5px;background:#171719;border-radius:5px}
+#campaign-iphone-evidence .case-phone-card>figcaption{font-size:11px;line-height:1.6;text-align:center;margin:20px 0 0;color:light-dark(#606065,#dedee2)}
+#campaign-iphone-evidence #campaign-three-before-after{padding:0;background:transparent}
+#campaign-iphone-evidence #campaign-three-before-after .pair{grid-template-columns:1fr;gap:20px}
+#campaign-iphone-evidence #campaign-three-before-after h3{font-size:20px;font-weight:700;line-height:1.2;margin-bottom:18px}
+#campaign-iphone-evidence #campaign-three-before-after figcaption{font-size:16px;font-weight:700;color:#f7f8fc;margin-bottom:12px}
+#campaign-iphone-evidence #campaign-three-before-after .demo{font-size:11px;letter-spacing:0;line-height:1.4;margin-bottom:20px}
+#campaign-iphone-evidence #campaign-three-before-after article{margin-bottom:28px;padding:18px 6px;background:#303136}
+#campaign-iphone-evidence #campaign-three-before-after article:last-child{margin-bottom:0}
+#campaign-iphone-evidence #campaign-three-before-after .legend{gap:9px 12px;font-size:12px;font-weight:600}
+#campaign-iphone-evidence #poll-outlook-mockup{padding:20px 6px 18px;margin-top:28px}
+#campaign-iphone-evidence #poll-outlook-mockup h3{font-size:20px;font-weight:700;line-height:1.2}
+#campaign-iphone-evidence #poll-outlook-mockup .po-legend{font-size:13px;font-weight:600}
+#campaign-iphone-evidence #poll-outlook-mockup .po-demo{font-size:11px;letter-spacing:0;line-height:1.4}
+#campaign-iphone-evidence .brief-next{font-size:14px;color:#414247;line-height:1.5;margin-top:22px}
+#campaign-iphone-evidence .brief-prepare{display:block;width:100%;padding:14px 12px;margin:18px 0 12px;border:0;border-radius:12px;background:#e7227a;color:#fff;font:inherit;font-weight:650;opacity:1;-webkit-text-fill-color:#fff}
+#campaign-iphone-evidence .preview-note{font-size:11px;color:#606065;margin:0;line-height:1.4}
+@media(max-width:800px){#campaign-iphone-evidence .case-phone-card{width:min(100%,350px)}#campaign-iphone-evidence .campaign-screen-header{padding:12px 10px}#campaign-iphone-evidence .campaign-screen-account{font-size:11px;padding:6px 8px}}
+@media(max-width:340px){#campaign-iphone-evidence .phone-report{padding-left:9px;padding-right:9px}#campaign-iphone-evidence .campaign-screen-header{gap:4px;padding-left:8px;padding-right:8px}#campaign-iphone-evidence .campaign-screen-account{padding:6px}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<figure class="case-phone-card">
+<div class="phone-shell"><div class="phone-screen">
+<div class="phone-status" aria-hidden="true"><span>9:41</span><i class="phone-island"></i><span class="phone-status-icons">▮▮▮ <span class="phone-battery"></span></span></div>
+<div class="campaign-screen-header"><div class="campaign-screen-brand"><img src="assets/framegate-symbol.png" alt=""><div class="campaign-brand-copy"><span class="campaign-brand-name">CampaignConsult</span><span class="campaign-brand-role">Candidate view · Campaign briefing</span></div></div><span class="campaign-screen-account">Account</span></div>
+<p class="brief-scroll-hint" id="new-charts-scroll"><span aria-hidden="true">↓</span> Scroll inside to read the full briefing</p>
+<div class="phone-report" role="region" aria-label="Campaign briefing with four chart sections" aria-describedby="new-charts-scroll">
+<p class="phone-report-name">Monthly comparison</p>
+<h3 class="report-question">How is our campaign changing?</h3>
+
+<section id="campaign-three-before-after" aria-label="Three before and after chart mockups">
+<style>
+#campaign-three-before-after{--fg-pink:#e7227a;--fg-paper:#f7f8fc;--fg-grey:#414247;--fg-line:#6b6c75;font-family:Arial,Helvetica,sans-serif;color:#f7f8fc;background:#303136;padding:24px;box-sizing:border-box;width:100%}
+#campaign-three-before-after *{box-sizing:border-box}
+#campaign-three-before-after .demo{font-size:11px;letter-spacing:.06em;color:#d7d7df;margin:0 0 26px}
+#campaign-three-before-after article{margin:0 0 36px}
+#campaign-three-before-after article:last-child{margin-bottom:0}
+#campaign-three-before-after h3{font-size:23px;line-height:1.15;font-weight:500;letter-spacing:-.02em;margin:0 0 17px}
+#campaign-three-before-after .pair{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+#campaign-three-before-after figure{margin:0;min-width:0}
+#campaign-three-before-after figcaption{font-size:13px;color:#d7d7df;margin-bottom:8px}
+#campaign-three-before-after .now{color:#fff}
+#campaign-three-before-after svg{width:100%;display:block}
+#campaign-three-before-after svg text{fill:#f7f8fc;font-size:12px;font-family:inherit}
+#campaign-three-before-after .legend{display:flex;gap:16px;flex-wrap:wrap;color:#dbdbe3;font-size:11px;line-height:1.5;margin:10px 0 0}
+#campaign-three-before-after .swatch{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;background:#e7227a}
+#campaign-three-before-after .opposition{background:#c8c9d1}
+#campaign-three-before-after .unknown{background:transparent;border:1px solid #c8c9d1}
+#campaign-three-before-after .ramp{display:inline-block;width:65px;height:8px;background:linear-gradient(90deg,#777881,#e7227a);margin:0 6px}
+@media(max-width:700px){#campaign-three-before-after{padding:20px 12px}.pair{grid-template-columns:1fr!important;gap:24px!important}#campaign-three-before-after h3{font-size:21px}}
+</style>
+
+<article><h3>Where is the debate moving?</h3><div class="pair"><figure><figcaption>Last month</figcaption><svg data-type="field" data-period="0" role="img" aria-label="Example political field last month: housing and healthcare are relatively quiet."></svg></figure><figure><figcaption class="now">Now</figcaption><svg data-type="field" data-period="1" role="img" aria-label="Example political field now: housing heats up against us; healthcare heats up in our favour. Both periods use identical scales."></svg></figure></div><div class="legend"><span>Quiet <i class="ramp"></i> Heated</span><span>Circle area = participating sources</span><span>Trail = movement since last month</span></div></article>
+<article><h3>Is our message moving beyond our core voters?</h3><div class="pair"><figure><figcaption>Last month</figcaption><svg data-type="bubble" data-period="0" role="img" aria-label="Schematic: message stays mostly among core voters."></svg></figure><figure><figcaption class="now">Now</figcaption><svg data-type="bubble" data-period="1" role="img" aria-label="Schematic: message spreads to adjacent and undecided audiences. Groups remain in fixed positions."></svg></figure></div><div class="legend"><span><i class="swatch"></i>Message observed</span><span>Waves = spread over time</span><span>Exposure ≠ agreement · Schematic audience groups</span></div></article>
+<article><h3>Who is backing our proposal inside the party?</h3><div class="pair"><figure><figcaption>Last month</figcaption><svg data-type="network" data-period="0" role="img" aria-label="Fictional party network before: support is concentrated among a small group."></svg></figure><figure><figcaption class="now">Now</figcaption><svg data-type="network" data-period="1" role="img" aria-label="Same fictional network after: explicit support expands, some members remain opposed or unclassified."></svg></figure></div><div class="legend"><span><i class="swatch"></i>Explicit support</span><span><i class="swatch opposition"></i>Explicit opposition</span><span><i class="swatch unknown"></i>No clear position</span><span>Links = joint statements · Fixed node positions</span></div></article>
+
+<script>
+(()=>{
+const root=document.getElementById('campaign-three-before-after');const P='#e7227a',G='#c8c9d1',L='#62636d',BG='#303136';
+const text=(s,x,y,t,anchor='middle')=>s.append('text').attr('x',x).attr('y',y).attr('text-anchor',anchor).text(t);
+function multiline(s,x,y,lines){const t=text(s,x,y,'');lines.forEach((v,i)=>t.append('tspan').attr('x',x).attr('dy',i?16:0).text(v));return t;}
+const old=[{name:'Housing',x:-25,y:70,n:14},{name:'Healthcare',x:25,y:90,n:18},{name:'Immigration',x:-55,y:165,n:28}];
+const recent=[{name:'Housing',x:-55,y:170,n:28},{name:'Healthcare',x:50,y:180,n:32},{name:'Immigration',x:-15,y:100,n:20}];
+const all=old.concat(recent),extent=d3.extent(all,d=>d.y),yd=[0,Math.ceil((extent[1]+35)/50)*50];
+function field(s,w,k){
+const l=64,r=w-12,t=35,b=208;
+const x=d3.scaleLinear().domain([-100,100]).range([l,r]),y=d3.scaleLinear().domain(yd).range([b,t]);const rad=d3.scaleSqrt().domain([0,d3.max(all,d=>d.n)]).range([0,27]);
+const defs=s.append('defs');const id='field-glow-'+k;
+const g=defs.append('radialGradient').attr('id',id);g.append('stop').attr('offset','0%').attr('stop-color',P).attr('stop-opacity',.8);g.append('stop').attr('offset','48%').attr('stop-color',P).attr('stop-opacity',.33);g.append('stop').attr('offset','100%').attr('stop-color',P).attr('stop-opacity',0);
+defs.append('clipPath').attr('id','field-clip-'+k).append('rect').attr('x',l).attr('y',t).attr('width',r-l).attr('height',b-t);
+s.append('rect').attr('data-chart-frame','').attr('x',l).attr('y',t).attr('width',r-l).attr('height',b-t).attr('fill','none').attr('stroke',L);
+for(const v of[0,100,200]){s.append('line').attr('x1',l).attr('x2',r).attr('y1',y(v)).attr('y2',y(v)).attr('stroke',L).attr('opacity',.6);text(s,l-9,y(v)+4,v,'end');}
+s.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',t).attr('y2',b).attr('stroke',L);
+text(s,l,17,'Intensity · usual = 100','start').attr('class','axis-title').attr('data-axis','y');
+for(const v of[-100,0,100])text(s,x(v),227,v,v===-100?'start':v===100?'end':'middle');
+text(s,l,248,'Against us','start');text(s,r,248,'For us','end');text(s,(l+r)/2,270,'Position balance (%)').attr('class','axis-title').attr('data-axis','x');
+const marks=s.append('g').attr('clip-path',`url(#field-clip-${k})`);
+if(k)recent.forEach((d,i)=>{const a=old[i];marks.append('circle').attr('cx',x(a.x)).attr('cy',y(a.y)).attr('r',rad(a.n)).attr('fill','none').attr('stroke',G).attr('opacity',.3);marks.append('line').attr('x1',x(a.x)).attr('y1',y(a.y)).attr('x2',x(d.x)).attr('y2',y(d.y)).attr('stroke',G).attr('stroke-dasharray','3 4').attr('opacity',.7);});
+(k?recent:old).forEach(d=>{const xx=x(d.x),yy=y(d.y),rr=rad(d.n);marks.append('circle').attr('cx',xx).attr('cy',yy).attr('r',rr*1.8).attr('fill',`url(#${id})`).attr('opacity',d.y/200);marks.append('circle').attr('cx',xx).attr('cy',yy).attr('r',rr).attr('fill',d3.interpolateRgb('#777881',P)(Math.min(1,d.y/200))).attr('opacity',.85).attr('data-tooltip',`Illustrative ${d.name}: intensity ${d.y}, balance ${d.x}, ${d.n} sources`);const anchor=xx>(l+r)/2?'end':'start';text(s,Math.min(r-4,Math.max(l+4,xx+(anchor==='end'?rr:-rr))),yy-rr-8,d.name,anchor);});
+}
+function bubble(s,w,k){
+const pts=[{x:.28,y:.44,r:58,label:['Core','voters']},{x:.68,y:.23,r:46,label:['Adjacent','audiences']},{x:.77,y:.68,r:47,label:['Undecided','voters']},{x:.27,y:.86,r:34,label:["Opponents’",'audiences']}];
+const cx=w*.28,cy=137;const defs=s.append('defs');defs.append('clipPath').attr('id','bubble-clip-'+k).append('rect').attr('width',w).attr('height',310);const waves=s.append('g').attr('clip-path',`url(#bubble-clip-${k})`);
+[64,98,140,190,245].filter((_,i)=>k||i===0).forEach((r,i)=>waves.append('circle').attr('cx',cx).attr('cy',cy).attr('r',r).attr('fill','none').attr('stroke',P).attr('stroke-width',1.2).attr('opacity',.4-i*.055));
+pts.forEach((p,i)=>{const px=p.x*w,py=p.y*310;s.append('circle').attr('cx',px).attr('cy',py).attr('r',p.r).attr('fill',i===0?P:'#73747f').attr('opacity',i===0?.24:.12);const count=k?[15,10,8,2][i]:[15,1,0,0][i];for(let j=0;j<count;j++){const a=j*2.399,rr=16+Math.sqrt(j/count)*(p.r-22);s.append('circle').attr('cx',px+Math.cos(a)*rr).attr('cy',py+Math.sin(a)*rr).attr('r',2.8).attr('fill',P);}multiline(s,px,py-4,p.label);});
+}
+const points=[['You',.47,.48],['A',.25,.30],['B',.36,.16],['C',.55,.14],['D',.68,.26],['E',.78,.45],['F',.66,.63],['G',.50,.75],['H',.30,.73],['I',.17,.55],['J',.12,.22],['K',.21,.11],['L',.73,.11],['M',.87,.24],['N',.88,.65],['O',.73,.83],['P',.31,.91],['Q',.13,.79],['R',.07,.42]];
+const edges=[[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[0,7],[0,8],[0,9],[1,2],[1,9],[1,10],[2,11],[2,3],[3,4],[3,12],[4,5],[4,12],[4,13],[5,13],[5,14],[6,14],[6,15],[6,7],[7,15],[7,16],[8,16],[8,17],[8,9],[9,17],[9,18],[10,11],[10,18]];
+const states=[['s','s','s','u','o','o','u','u','s','s','u','u','o','o','u','u','u','s','u'],['s','s','s','s','o','o','s','s','s','s','s','s','o','o','u','s','s','s','u']];
+function network(s,w,k){const coord=i=>[points[i][1]*w,points[i][2]*275+10];edges.forEach(([a,b])=>{const[ax,ay]=coord(a),[bx,by]=coord(b);s.append('line').attr('x1',ax).attr('y1',ay).attr('x2',bx).attr('y2',by).attr('stroke',states[k][a]==='s'&&states[k][b]==='s'?P:L).attr('opacity',.43).attr('stroke-width',1);});points.forEach(([name],i)=>{const[x,y]=coord(i),state=states[k][i],radius=i===0?22:11;s.append('circle').attr('cx',x).attr('cy',y).attr('r',radius).attr('fill',state==='s'?P:state==='o'?G:BG).attr('stroke',state==='u'?G:'none').attr('stroke-width',1.2).attr('data-tooltip',`Fictional member ${name}: ${state==='s'?'explicit support':state==='o'?'explicit opposition':'no clear position'} for the proposal`);text(s,x,y+4,name).style('fill',state==='o'?'#303136':'#ffffff');});}
+function draw(){root.querySelectorAll('svg[data-type]').forEach(node=>{const s=d3.select(node),w=node.getBoundingClientRect().width,k=Number(node.dataset.period);s.selectAll('*').remove();const height=node.dataset.type==='field'?280:310;s.attr('viewBox',`0 0 ${w} ${height}`).attr('height',height);({field,bubble,network})[node.dataset.type](s,w,k);});}
+new ResizeObserver(draw).observe(root);draw();
+})();
+</script>
+</section>
+
+<section id="poll-outlook-mockup" aria-label="Illustrative poll outlook design, not a real forecast">
+<style>
+#poll-outlook-mockup{box-sizing:border-box;width:100%;padding:26px;background:#303136;color:#f7f8fc;font-family:Arial,Helvetica,sans-serif}
+#poll-outlook-mockup *{box-sizing:border-box}
+#poll-outlook-mockup .po-demo{font-size:11px;color:#d7d7df;letter-spacing:.04em;margin:0 0 20px}
+#poll-outlook-mockup h3{font-size:27px;line-height:1.15;letter-spacing:-.025em;font-weight:500;margin:0 0 20px;max-width:550px}
+#poll-outlook-mockup svg{display:block;width:100%}
+#poll-outlook-mockup svg text{font-family:inherit;font-size:12px;fill:#f7f8fc}
+#poll-outlook-mockup .po-legend{display:flex;flex-wrap:wrap;gap:10px 20px;margin:14px 0 18px;font-size:12px}
+#poll-outlook-mockup .po-swatch{display:inline-block;width:22px;height:0;border-top:2px solid #f7f8fc;vertical-align:middle;margin-right:7px}
+#poll-outlook-mockup .po-pink{border-color:#e7227a}
+#poll-outlook-mockup .po-dash{border-color:#b8bac3;border-top-style:dashed}
+#poll-outlook-mockup .po-band{height:10px;border:none;background:#e7227a;opacity:.25}
+#poll-outlook-mockup .po-note{font-size:12px;line-height:1.6;color:#d7d7df;margin:0}
+@media(max-width:450px){#poll-outlook-mockup{padding:20px 12px}#poll-outlook-mockup h3{font-size:23px}}
+</style>
+<p class="po-demo">DESIGN ONLY · Illustrative values · No fitted model or real forecast</p>
+<h3>What could this mean for your polls?</h3>
+<svg role="img" aria-label="Illustrative poll outlook. Historical support ends at 28 percent. Six weeks ahead the example forecast is 30.5 percent with discourse signals versus 28.1 percent without. The illustrative uncertainty band extends from 26.5 to 34.5 percent; it is not a calibrated interval."></svg>
+<div class="po-legend"><span><i class="po-swatch"></i>Poll trend</span><span><i class="po-swatch po-pink"></i>With discourse signals</span><span><i class="po-swatch po-dash"></i>Without discourse signals</span><span><i class="po-swatch po-band"></i>Illustrative uncertainty</span></div>
+
+<script>
+(()=>{
+const root=document.getElementById('poll-outlook-mockup'),node=root.querySelector('svg');
+const history=[{t:-6,v:26.7},{t:-5,v:27.1},{t:-4,v:26.9},{t:-3,v:27.6},{t:-2,v:27.4},{t:-1,v:27.8},{t:0,v:28}];
+const future=[{t:0,v:28,b:28,lo:27.5,hi:28.5},{t:1,v:28.5,b:28.1,lo:27.4,hi:29.6},{t:2,v:29,b:28.2,lo:27.2,hi:30.8},{t:3,v:29.4,b:28.2,lo:27.1,hi:31.7},{t:4,v:29.8,b:28.2,lo:26.9,hi:32.7},{t:5,v:30.2,b:28.1,lo:26.7,hi:33.7},{t:6,v:30.5,b:28.1,lo:26.5,hi:34.5}];
+function draw(){
+const s=d3.select(node),w=node.getBoundingClientRect().width,h=330,l=64,r=w-16,t=40,b=259;
+s.selectAll('*').remove();s.attr('height',h).attr('viewBox',`0 0 ${w} ${h}`);
+const tx=d3.extent(history.concat(future),d=>d.t),ext=d3.extent(history.map(d=>d.v).concat(future.flatMap(d=>[d.lo,d.hi,d.b])));
+const x=d3.scaleLinear().domain(tx).range([l+4,r-4]),y=d3.scaleLinear().domain([Math.floor(ext[0])-1,Math.ceil(ext[1])+1]).range([b-4,t+4]);
+const label=(xx,yy,txt,a='start')=>s.append('text').attr('x',xx).attr('y',yy).attr('text-anchor',a).text(txt);
+s.append('rect').attr('data-chart-frame','').attr('x',l).attr('y',t).attr('width',r-l).attr('height',b-t).attr('fill','none').attr('stroke','#62636d');
+for(const v of[26,30,34]){s.append('line').attr('x1',l).attr('x2',r).attr('y1',y(v)).attr('y2',y(v)).attr('stroke','#62636d').attr('opacity',.55);label(l-10,y(v)+4,`${v}%`,'end');}
+label(l,17,'Polling support (%)').attr('class','axis-title').attr('data-axis','y');
+label(x(0)+8,34,'Outlook');
+s.append('path').datum(future).attr('fill','#e7227a').attr('opacity',.18).attr('d',d3.area().x(d=>x(d.t)).y0(d=>y(d.lo)).y1(d=>y(d.hi)));
+const line=key=>d3.line().x(d=>x(d.t)).y(d=>y(d[key]));
+s.append('path').datum(history).attr('d',line('v')).attr('fill','none').attr('stroke','#f7f8fc').attr('stroke-width',2);
+s.append('path').datum(future).attr('d',line('b')).attr('fill','none').attr('stroke','#b8bac3').attr('stroke-width',2).attr('stroke-dasharray','5 4');
+s.append('path').datum(future).attr('d',line('v')).attr('fill','none').attr('stroke','#e7227a').attr('stroke-width',3);
+s.append('line').attr('x1',x(0)).attr('x2',x(0)).attr('y1',t).attr('y2',b).attr('stroke','#8a8b94').attr('stroke-dasharray','3 4');
+s.append('circle').attr('cx',x(0)).attr('cy',y(28)).attr('r',4).attr('fill','#f7f8fc');
+label(x(0)-8,y(28)-12,'28.0%','end');label(x(6)-5,y(30.5)-12,'30.5%','end');label(x(6)-5,y(28.1)+19,'28.1%','end');
+for(const[v,txt]of[[-6,'−6 weeks'],[0,'Now'],[6,'+6 weeks']])label(x(v),282,txt,v===-6?'start':v===6?'end':'middle');
+label((l+r)/2,315,'Time relative to today (weeks)','middle').attr('class','axis-title').attr('data-axis','x');
+}
+new ResizeObserver(draw).observe(root);draw();
+})();
+</script>
+</section>
+
+<div class="brief-alert"><p><strong>Briefing</strong></p><p>Housing is heating up against our position. Healthcare is moving in our favour.</p><p>Our message is reaching beyond our core voters. Support for our proposal within the party is growing.</p></div>
+<div class="brief-next"><button class="brief-prepare" type="button" disabled>Prepare my briefing</button></div>
+</div><div class="phone-home-indicator" aria-hidden="true"></div></div></div>
+<figcaption>CampaignConsult · Product preview</figcaption>
+</figure>
+</section>
+
+</div><span class="flow-arrow flow-arrow-out" aria-hidden="true"></span>
+<aside class="flow-side" aria-label="Turn evidence into action">
+<h3>Shape<br>the debate.</h3>
+<div class="flow-group"><h4>Your strategy</h4><p>Campaign priorities.<br>Messages. Your next move.</p></div>
+<div class="flow-group"><h4>Your materials</h4><p>Interview briefs. Speeches.<br>Press releases. Video scripts.</p></div>
+<div class="flow-group"><h4>Your channels</h4><p>Social posts and ads.<br>One message, adapted for each audience and format.</p></div>
+<p class="flow-foot">YouTube · TikTok · X · Instagram · Press<br>Television · Journalism · Official communications</p>
+<p class="flow-foot">National · State · Regional · District</p>
+</aside>
+</div>
+
+</section>
 
   <section class="product-preview-section" id="in-transit" aria-labelledby="product-evidence-heading">
     <div class="product-preview-inner">
       <div class="product-evidence" aria-labelledby="product-evidence-heading">
-        <h3 id="product-evidence-heading">Your political instinct. <em>Backed by evidence.</em></h3>
-        <p class="product-evidence-lead"><strong>CampaignConsult.ai is developed and brought to market by Framegate Intelligence.</strong> A simple conversation with a campaign consultant grounded in political data—not just a general-purpose AI chat. CampaignConsult.ai connects official communications, journalism and political creator content to inform your next move.</p>
+        <h3 id="product-evidence-heading">The evidence behind your next move.</h3>
+        <p class="product-evidence-lead"><strong>CampaignConsult.ai is developed and brought to market by Framegate Intelligence.</strong></p>
         <div class="product-evidence-stats" aria-label="Evidence base">
           <article><strong>809</strong><span>YouTube channels registered</span></article>
           <article><strong>~4,000</strong><span>Political articles per month</span></article>
           <article><strong>Since January 2024</strong><span>Historical coverage</span></article>
         </div>
-        <p class="product-evidence-close">Bring your political judgment. <strong>Add the evidence to act on it.</strong></p>
       </div>
     </div>
   </section>
