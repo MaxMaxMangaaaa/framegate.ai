@@ -676,3 +676,21 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   font-weight: 750;
   letter-spacing: .015em;
 }
+
+
+.hero-assurance {
+  max-width: 760px;
+  margin: 20px 0 0;
+  color: var(--slate);
+  font-size: clamp(14px, 1.2vw, 17px);
+  line-height: 1.55;
+}
+
+.hero-signoff {
+  margin: 18px 0 0;
+  color: var(--ink);
+  font-size: clamp(15px, 1.35vw, 19px);
+  line-height: 1.35;
+  font-weight: 750;
+  letter-spacing: -.01em;
+}
