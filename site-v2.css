@@ -1115,7 +1115,7 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 }
 
 
-/* September 2026 wordmark: original supplied artwork, without the retired symbol. */
+/* September 2026 wordmark paired with the original Framegate symbol. */
 .brand img.brand-wordmark {
   width: 150px;
   height: auto;
@@ -1137,4 +1137,10 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 @media (max-width: 720px) {
   .brand img.brand-wordmark { width: 125px; height: auto; }
   .hero-mark { width: 85vw; right: -16vw; top: 12%; }
+}
+
+/* Preserve the original brand symbol alongside the new wordmark. */
+.hero-mark { right: -4vw; top: 10%; width: min(49vw, 690px); mix-blend-mode: normal; }
+@media (max-width: 720px) {
+  .hero-mark { width: 72vw; top: 9%; right: -18vw; }
 }
