@@ -1113,3 +1113,28 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .final-cta h2 .cta-primary {
   color: var(--pink);
 }
+
+
+/* September 2026 wordmark: original supplied artwork, without the retired symbol. */
+.brand img.brand-wordmark {
+  width: 150px;
+  height: auto;
+  filter: none;
+  mix-blend-mode: multiply;
+}
+.hero-mark {
+  width: min(60vw, 820px);
+  right: -5vw;
+  top: 16%;
+  mix-blend-mode: multiply;
+}
+.footer-brand img.footer-wordmark {
+  width: 180px;
+  height: auto;
+  filter: grayscale(1) invert(1);
+  mix-blend-mode: screen;
+}
+@media (max-width: 720px) {
+  .brand img.brand-wordmark { width: 125px; height: auto; }
+  .hero-mark { width: 85vw; right: -16vw; top: 12%; }
+}
