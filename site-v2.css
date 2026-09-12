@@ -1357,7 +1357,11 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .case-brief-card .brief-window p + p { margin-top: 8px; }
 .case-brief-card .brief-window span { display: block; color: #606065; font-size: 11px; line-height: 1.4; }
 
-/* Match the other case phone's width while retaining the requested shorter height. */
-.case-brief-card .phone-screen { height: 506px; }
+/* iPhone 17 Pro Max body proportions: 78 mm wide by 163.4 mm tall.
+   Source: https://www.apple.com/iphone-17-pro/specs/ */
+.case-phone-card .phone-shell { aspect-ratio: 78 / 163.4; display: flex; flex-direction: column; }
+.case-phone-card .phone-screen { height: auto; min-height: 0; flex: 1; display: flex; flex-direction: column; padding-bottom: 24px; }
+.case-phone-card .phone-status, .case-phone-card .campaign-screen-header { flex-shrink: 0; }
+.case-phone-card .phone-report { min-height: 0; flex: 1; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-width: thin; scrollbar-color: #b9bbc3 #fff; }
 .case-brief-card .brief-window p > strong { color: #171719; }
 .case-brief-card .brief-window p + p > strong:last-child { color: #bc185e; }
