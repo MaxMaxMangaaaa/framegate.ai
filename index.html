@@ -196,27 +196,51 @@
         </div>
         <figcaption>Historical chart · Suggested campaign action</figcaption>
       </figure>
-      <figure class="case-phone-card">
+      <figure class="case-phone-card case-brief-card" id="affordability-briefing">
         <div class="phone-shell">
           <div class="phone-screen">
             <div class="phone-status" aria-hidden="true"><span>9:41</span><i class="phone-island"></i><span class="phone-status-icons">▮▮▮ <span class="phone-battery"></span></span></div>
             <div class="campaign-screen-header">
-              <div class="campaign-screen-brand"><img src="assets/framegate-symbol.png" alt=""><div class="campaign-brand-copy"><span class="campaign-brand-name">CampaignConsult</span><span class="campaign-brand-role">Caucus view · Majority Leader</span></div></div>
+              <div class="campaign-screen-brand"><img src="assets/framegate-symbol.png" alt=""><div class="campaign-brand-copy"><span class="campaign-brand-name">CampaignConsult</span><span class="campaign-brand-role">Party view · DEM press office</span></div></div>
               <span class="campaign-screen-account">Account</span>
             </div>
-            <div class="phone-report" tabindex="0" role="region" aria-label="Opponent outlook, scroll to read">
-              <p class="phone-report-name">Opponent outlook</p>
-              <h3>What is your opponent likely to do next?</h3>
-              <a class="phone-report-image" href="assets/opponent-tone-forecast.png" target="_blank" rel="noopener noreferrer" aria-label="Open opponent outlook diagram at full size">
-                <img src="assets/opponent-tone-forecast.png" alt="Framegate tone timeline showing historical change points and a six-week Trump behavior forecast" loading="lazy" decoding="async">
+            <p class="brief-scroll-hint" id="affordability-scroll-hint"><span aria-hidden="true">↓</span> Scroll inside to read the full briefing</p>
+            <div class="phone-report" tabindex="0" role="region" aria-label="Affordability launch briefing, scroll to read" aria-describedby="affordability-scroll-hint">
+              <p class="phone-report-name">Launch planning · Historical briefing<br>Data through January 31, 2026</p>
+              <h3>When should we launch our affordability proposal?</h3>
+              <p class="brief-intro">Don’t set the date on this forecast alone.</p>
+              <div class="brief-alert">
+                <p class="brief-alert-label">Launch timing: affordability</p>
+                <p>Media agitation is rising again. The recent dip did not last, so we should not assume a quieter news cycle is opening up.</p>
+              </div>
+              <p class="affordability-chart-heading">Overall view</p>
+              <a class="phone-report-image" href="assets/opponent-tone-forecast.png" target="_blank" rel="noopener noreferrer" aria-label="Open the original overall diagram at full size">
+                <img src="assets/opponent-tone-forecast.png" alt="Original Framegate tone timeline with historical change points and six-week forecast scenarios" loading="lazy" decoding="async">
               </a>
-              <p class="phone-report-description">Translate repeated behavior into weighted scenarios—not certainty.</p>
-              <a class="phone-report-link" href="assets/opponent-tone-forecast.png" target="_blank" rel="noopener noreferrer">View full diagram <span aria-hidden="true">↗</span></a>
+              <a class="phone-report-link affordability-chart-link" href="assets/opponent-tone-forecast.png" target="_blank" rel="noopener noreferrer">View full diagram <span aria-hidden="true">↗</span></a>
+        <figure class="affordability-month-chart">
+          <p class="cc-chart-title">Monthly view · January 2026</p>
+          <p class="cc-chart-sub">Media agitation · 7-day average</p>
+          <svg role="img" aria-label="Historical seven-day average of media agitation in January 2026, rising to 3.09 at January 31. No future forecast is shown."></svg>
+          <figcaption class="cc-chart-note">84,037 articles · January 2024–January 2026<br>The January 24 dip lasted three days under the monitoring rule. Index fitted on 2024 data.</figcaption>
+        </figure>
+
+              <div class="campaign-brief">
+                <p>But a busy news cycle can also create an opportunity if our proposal connects with the stories people are following.</p>
+                <h4>Before choosing your launch date, check what your proposal will compete with.</h4>
+                <ol class="brief-steps">
+                  <li>Identify the stories that dominate coverage and could crowd out our announcement.</li>
+                  <li>See which stories are gaining momentum and which are fading.</li>
+                  <li>Look for a relevant connection to our affordability proposal, then assess when and how to launch.</li>
+                </ol>
+                <p>Next, we’ll examine competing stories and how they’re developing.</p>
+                <button class="brief-prepare" type="button" disabled title="Product preview">Analyze competing stories</button>
+              </div>
             </div>
             <div class="phone-home-indicator" aria-hidden="true"></div>
           </div>
         </div>
-        <figcaption>Framegate Intelligence · Diagram in product mockup</figcaption>
+        <figcaption>CampaignConsult · Product preview</figcaption>
       </figure>
     </div>
   </section>
@@ -259,5 +283,42 @@
     </div>
   </footer>
 </main>
+  <script>
+    (() => {
+      const root=document.getElementById("affordability-briefing");
+      const svg=root.querySelector(".affordability-month-chart svg");
+      const data=[{"date":"2026-01-01","value":0.4193159481440662},{"date":"2026-01-02","value":0.529026764329438},{"date":"2026-01-03","value":1.035855870328266},{"date":"2026-01-04","value":1.5978693872008882},{"date":"2026-01-05","value":1.9187460077862526},{"date":"2026-01-06","value":2.29329407240159},{"date":"2026-01-07","value":2.6613269934124486},{"date":"2026-01-08","value":3.022366530687372},{"date":"2026-01-09","value":3.288329303032117},{"date":"2026-01-10","value":3.048828360802317},{"date":"2026-01-11","value":2.876773469752014},{"date":"2026-01-12","value":2.9601311554561143},{"date":"2026-01-13","value":2.8461131392288825},{"date":"2026-01-14","value":2.6396717038530175},{"date":"2026-01-15","value":2.5143633692152716},{"date":"2026-01-16","value":2.4173317232022695},{"date":"2026-01-17","value":2.4283717312250075},{"date":"2026-01-18","value":2.1074482231442686},{"date":"2026-01-19","value":2.0380455248922806},{"date":"2026-01-20","value":1.949564990385779},{"date":"2026-01-21","value":2.0873857137402316},{"date":"2026-01-22","value":2.245095001656096},{"date":"2026-01-23","value":2.404148919085331},{"date":"2026-01-24","value":2.1628121336935044},{"date":"2026-01-25","value":2.5376313645432007},{"date":"2026-01-26","value":2.752885409869336},{"date":"2026-01-27","value":2.88136664522573},{"date":"2026-01-28","value":2.8581260028902165},{"date":"2026-01-29","value":2.9477204775237054},{"date":"2026-01-30","value":2.953234597319247},{"date":"2026-01-31","value":3.089771167773388}];
+      const ns="http://www.w3.org/2000/svg";
+      function add(tag,attrs,text){
+        const node=document.createElementNS(ns,tag);
+        for(const [key,value] of Object.entries(attrs))node.setAttribute(key,String(value));
+        if(text!==undefined)node.textContent=text;
+        svg.appendChild(node);return node;
+      }
+      function draw(){
+        const width=svg.getBoundingClientRect().width||300,height=190;
+        svg.setAttribute("viewBox","0 0 "+width+" "+height);
+        svg.replaceChildren();
+        const left=34,right=14,top=24,bottom=37;
+        const min=Math.min(...data.map(d=>d.value)),max=Math.max(...data.map(d=>d.value));
+        const low=Math.floor(min-.2),high=Math.ceil(max+.2);
+        const x=i=>left+i*(width-left-right)/(data.length-1);
+        const y=v=>height-bottom-(v-low)*(height-top-bottom)/(high-low);
+        add("text",{x:left,y:12,fill:"#606065","font-size":11},"Index");
+        for(let v=low;v<=high;v++){
+          add("line",{x1:left,x2:width-right,y1:y(v),y2:y(v),stroke:"#dedfe5","stroke-width":1});
+          add("text",{x:left-7,y:y(v)+4,"text-anchor":"end",fill:"#606065","font-size":11},v);
+        }
+        add("rect",{x:left,y:top,width:width-left-right,height:height-top-bottom,fill:"none",stroke:"#dedfe5","stroke-width":1});
+        [[0,"Jan 1"],[15,"Jan 16"],[30,"Jan 31"]].forEach(([i,label])=>add("text",{x:x(i),y:height-18,"text-anchor":i===0?"start":i===30?"end":"middle",fill:"#606065","font-size":11},label));
+        add("path",{d:data.map((d,i)=>(i?"L":"M")+x(i).toFixed(2)+","+y(d.value).toFixed(2)).join(" "),fill:"none",stroke:"#e7227a","stroke-width":2.2,"stroke-linejoin":"round"});
+        const last=data.at(-1);
+        add("circle",{cx:x(30),cy:y(last.value),r:3.5,fill:"#e7227a"});
+        add("text",{x:x(30)-4,y:y(last.value)-10,"text-anchor":"end",fill:"#414247","font-size":12,"font-weight":600},last.value.toFixed(2));
+      }
+      new ResizeObserver(draw).observe(svg);
+      draw();
+    })();
+  </script>
 </body>
 </html>
