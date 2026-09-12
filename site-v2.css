@@ -1048,3 +1048,53 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 }
 
 .cases-intro h2 { margin-top: 0; }
+
+
+/* Approved 25% reduction for all major section headlines */
+.statement-wrap h2,
+.service-intro h2,
+.inputs-intro h2,
+.cases-intro h2,
+.needs-intro h2,
+.deliverables-intro h2,
+.lifecycle-intro h2,
+.receptivity-intro h2,
+.architecture-heading h2,
+.evidence-heading h2,
+.action-section h2,
+.product-copy h2,
+.final-cta h2,
+.audiences-intro h2,
+.advantage-intro h2,
+.levels-intro h2 {
+  font-size: clamp(30px, 4.15vw, 68px);
+}
+
+.role-heading h2 {
+  font-size: clamp(32px, 4vw, 59px);
+}
+
+@media (max-width: 720px) {
+  .statement-wrap h2,
+  .service-intro h2,
+  .inputs-intro h2,
+  .cases-intro h2,
+  .needs-intro h2,
+  .deliverables-intro h2,
+  .lifecycle-intro h2,
+  .receptivity-intro h2,
+  .architecture-heading h2,
+  .evidence-heading h2,
+  .action-section h2,
+  .product-copy h2,
+  .final-cta h2,
+  .audiences-intro h2,
+  .advantage-intro h2,
+  .levels-intro h2 {
+    font-size: clamp(29px, 8.4vw, 42px);
+  }
+
+  .role-heading h2 {
+    font-size: clamp(30px, 9.75vw, 47px);
+  }
+}
