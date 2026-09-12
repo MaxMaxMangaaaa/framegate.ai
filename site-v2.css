@@ -1351,3 +1351,8 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .brief-scroll-hint span { font-size: 17px; }
 @media (max-width: 800px) { .case-phone-card.case-brief-card { width: min(80%, 280px); } }
 @media (max-width: 380px) { .case-brief-card .phone-report h3 { font-size: 18.75px; } }
+
+.case-brief-card .brief-window { margin-bottom: 18px; font-size: 14px; line-height: 1.45; }
+.case-brief-card .brief-window p { margin: 0; }
+.case-brief-card .brief-window p + p { margin-top: 8px; }
+.case-brief-card .brief-window span { display: block; color: #606065; font-size: 11px; line-height: 1.4; }
