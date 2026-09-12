@@ -55,12 +55,20 @@
   </section>
 
 
-  <section class="audiences-section" id="outcomes">
+  <section class="audiences-section" id="outcomes" aria-labelledby="audiences-heading">
     <div class="audiences-intro">
-      <h2>Built for <em>winners</em></h2>
+      <h2 id="audiences-heading">One application. <em>Every political role.</em></h2>
     </div>
 
-    <article class="audience-role">
+    <div class="audience-tabs" role="tablist" aria-label="Choose your political role" hidden>
+      <button type="button" role="tab" id="role-tab-candidates" aria-controls="role-panel-candidates" aria-selected="true" tabindex="0">Candidates</button>
+      <button type="button" role="tab" id="role-tab-lawmakers" aria-controls="role-panel-lawmakers" aria-selected="false" tabindex="-1">Lawmakers</button>
+      <button type="button" role="tab" id="role-tab-caucus-leaders" aria-controls="role-panel-caucus-leaders" aria-selected="false" tabindex="-1">Caucus leaders</button>
+      <button type="button" role="tab" id="role-tab-parties" aria-controls="role-panel-parties" aria-selected="false" tabindex="-1">Parties</button>
+      <button type="button" role="tab" id="role-tab-supporters" aria-controls="role-panel-supporters" aria-selected="false" tabindex="-1">Supporters</button>
+    </div>
+
+    <article class="audience-role" id="role-panel-candidates">
       <div class="role-heading">
         <p class="role-audience">For candidates</p>
         <h2>Win the race.</h2>
@@ -72,7 +80,7 @@
       </div>
     </article>
 
-    <article class="audience-role">
+    <article class="audience-role" id="role-panel-lawmakers">
       <div class="role-heading">
         <p class="role-audience">For lawmakers</p>
         <h2>Keep your promises.<br>Keep your mandate.</h2>
@@ -84,7 +92,7 @@
       </div>
     </article>
 
-    <article class="audience-role">
+    <article class="audience-role" id="role-panel-caucus-leaders">
       <div class="role-heading">
         <p class="role-audience">For caucus leaders</p>
         <h2>Turn many voices into political power.</h2>
@@ -96,7 +104,7 @@
       </div>
     </article>
 
-    <article class="audience-role">
+    <article class="audience-role" id="role-panel-parties">
       <div class="role-heading">
         <p class="role-audience">For parties</p>
         <h2>One party. One direction.<br>Win at every level.</h2>
@@ -108,7 +116,7 @@
       </div>
     </article>
 
-    <article class="audience-role">
+    <article class="audience-role" id="role-panel-supporters">
       <div class="role-heading">
         <p class="role-audience">For supporters</p>
         <h2>Turn your members into a movement.</h2>
@@ -316,6 +324,43 @@
       }
       new ResizeObserver(draw).observe(svg);
       draw();
+    })();
+  </script>
+  <script>
+    (() => {
+      const section = document.getElementById("outcomes");
+      const tablist = section.querySelector(".audience-tabs");
+      const tabs = Array.from(tablist.querySelectorAll('[role="tab"]'));
+      const panels = tabs.map(tab => document.getElementById(tab.getAttribute("aria-controls")));
+      function select(index, focus = false) {
+        tabs.forEach((tab, i) => {
+          tab.setAttribute("aria-selected", String(i === index));
+          tab.tabIndex = i === index ? 0 : -1;
+          panels[i].hidden = i !== index;
+        });
+        if (focus) tabs[index].focus();
+      }
+      panels.forEach((panel, i) => {
+        panel.setAttribute("role", "tabpanel");
+        panel.setAttribute("aria-labelledby", tabs[i].id);
+        panel.tabIndex = 0;
+      });
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => select(index));
+        tab.addEventListener("keydown", event => {
+          let next;
+          if (event.key === "ArrowRight") next = (index + 1) % tabs.length;
+          else if (event.key === "ArrowLeft") next = (index - 1 + tabs.length) % tabs.length;
+          else if (event.key === "Home") next = 0;
+          else if (event.key === "End") next = tabs.length - 1;
+          else return;
+          event.preventDefault();
+          select(next, true);
+        });
+      });
+      select(0);
+      tablist.hidden = false;
+      section.classList.add("tabs-ready");
     })();
   </script>
 </body>
