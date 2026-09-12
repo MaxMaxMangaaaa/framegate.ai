@@ -1425,3 +1425,22 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 }
 
 .cases-evidence-copy { max-width: 820px; margin: 26px 0 0; color: #dedee2; font-size: clamp(17px, 1.6vw, 21px); line-height: 1.55; }
+
+/* Five role tabs, with complete copy retained and an accessible no-JS fallback. */
+#outcomes .audience-tabs { max-width: 1340px; margin: 40px auto 0; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid var(--line); }
+#outcomes .audience-tabs[hidden], #outcomes .audience-role[hidden] { display: none; }
+#outcomes .audience-tabs button { appearance: none; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--slate); padding: 14px 20px; min-height: 48px; font: inherit; font-size: clamp(15px, 1.35vw, 19px); font-weight: 500; line-height: 1.3; cursor: pointer; }
+#outcomes .audience-tabs button:hover { color: var(--pink); background: #fff0f6; }
+#outcomes .audience-tabs button[aria-selected="true"] { color: var(--pink); border-bottom-color: var(--pink); background: #fff0f6; }
+#outcomes .audience-tabs button:focus-visible, #outcomes [role="tabpanel"]:focus-visible { outline: 2px solid var(--pink); outline-offset: 4px; }
+#outcomes.tabs-ready .audience-role { min-height: 0; margin-top: 0; padding: clamp(36px, 4vw, 60px) 0 0; border-top: 0; gap: clamp(32px, 5vw, 80px); }
+#outcomes.tabs-ready .role-heading { position: static; }
+#outcomes.tabs-ready .role-copy p { padding-bottom: 26px; }
+#outcomes.tabs-ready .role-copy p + p { padding-top: 26px; }
+#outcomes.tabs-ready .role-copy p:last-child { padding-bottom: 0; }
+@media (max-width: 600px) {
+  #outcomes .audience-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; margin-top: 28px; }
+  #outcomes .audience-tabs[hidden] { display: none; }
+  #outcomes .audience-tabs button { grid-column: span 2; min-width: 0; padding: 10px 4px; font-size: 14px; }
+  #outcomes .audience-tabs button:nth-child(-n+2) { grid-column: span 3; }
+}
