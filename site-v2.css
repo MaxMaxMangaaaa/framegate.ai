@@ -1278,3 +1278,36 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
   .phone-preview .campaign-screen-body { padding-left: 12px; padding-right: 12px; }
   .phone-preview .campaign-screen-prompt { gap: 8px; padding-left: 10px; padding-right: 10px; }
 }
+
+/* Existing analysis graphics, unchanged, shown inside matching phone devices. */
+#cases { scroll-margin-top: 74px; }
+.case-phone-grid { max-width: 1060px; gap: clamp(36px, 8vw, 120px); margin-top: clamp(48px, 6vw, 84px); }
+.case-phone-card { width: min(100%, 380px); margin: 0; justify-self: center; min-width: 0; }
+.case-phone-card .phone-shell { box-shadow: 0 2px 0 #c5c5c8 inset, 0 28px 60px rgba(0,0,0,.25); }
+.case-phone-card .phone-screen { height: 690px; color: #171719; }
+.case-phone-card .campaign-screen-header { min-height: 66px; padding: 14px; gap: 9px; }
+.case-phone-card .campaign-screen-brand { gap: 8px; }
+.case-phone-card .campaign-screen-brand img { width: 22px; height: 30px; object-fit: contain; }
+.case-phone-card .campaign-screen-brand span { font-size: 18px; letter-spacing: -.04em; }
+.case-phone-card .campaign-screen-account { padding: 6px 10px; font-size: 12px; }
+.phone-report { padding: 32px 15px 45px; }
+.phone-report-name { margin: 0 0 16px; color: #606065; font-size: 12px; line-height: 1.4; }
+.phone-report h3 { margin: 0 0 26px; font-size: 28px; line-height: 1.12; letter-spacing: -.04em; font-weight: 650; }
+.phone-report-image { display: block; padding: 5px; border: 1px solid #e1e1e8; border-radius: 6px; background: #f7f8fc; }
+.phone-report-image img { width: 100%; height: auto; display: block; }
+.phone-report-image:focus-visible, .phone-report-link:focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
+.phone-report-description { margin: 24px 0 18px; color: #606065; font-size: 16px; line-height: 1.5; }
+.phone-report-link { display: inline-flex; gap: 8px; align-items: center; padding: 7px 0; color: #c51c65; border-bottom: 1px solid currentColor; font-size: 14px; font-weight: 600; }
+.case-phone-card figcaption { max-width: 340px; margin: 20px auto 0; text-align: center; color: #dedee2; font-size: 11px; line-height: 1.6; }
+@media (max-width: 800px) {
+  .case-phone-grid { grid-template-columns: 1fr; gap: 48px; }
+  .case-phone-card { width: min(100%, 350px); }
+}
+@media (max-width: 380px) {
+  .case-phone-card .campaign-screen-header { padding: 12px 10px; }
+  .case-phone-card .campaign-screen-brand span { font-size: 16px; }
+  .case-phone-card .campaign-screen-account { font-size: 11px; padding: 6px 8px; }
+  .phone-report { padding: 26px 12px 40px; }
+  .phone-report h3 { font-size: 25px; }
+  .phone-report-description { font-size: 15px; }
+}
