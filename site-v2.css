@@ -1144,3 +1144,19 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 @media (max-width: 720px) {
   .hero-mark { width: 72vw; top: 9%; right: -18vw; }
 }
+
+/* A personal introduction before the final contact invitation. */
+.founder-section { padding: clamp(80px, 10vw, 150px) clamp(24px, 7vw, 112px); background: var(--paper); }
+.founder-inner { max-width: 1340px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(40px, 7vw, 100px); align-items: center; }
+.founder-portrait { margin: 0; }
+.founder-portrait img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; }
+.founder-portrait figcaption { margin-top: 18px; color: var(--slate); font-size: 13px; line-height: 1.5; }
+.founder-copy h2 { margin: 0 0 32px; font-size: clamp(30px, 4.15vw, 60px); line-height: 1.04; letter-spacing: -.045em; font-weight: 650; }
+.founder-copy p { color: var(--slate); font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; margin: 0 0 24px; }
+.founder-link { display: inline-block; padding-bottom: 6px; border-bottom: 1px solid currentColor; color: var(--pink); font-size: 14px; line-height: 1.5; }
+@media (max-width: 720px) {
+  .founder-inner { grid-template-columns: 1fr; }
+  .founder-portrait { max-width: 420px; }
+  .founder-copy h2 { font-size: clamp(29px, 8.4vw, 42px); }
+  .header-cta { font-size: 12px; white-space: nowrap; }
+}
