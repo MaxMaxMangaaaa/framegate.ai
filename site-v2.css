@@ -1381,3 +1381,10 @@ footer { padding: 58px clamp(24px, 7vw, 112px) 30px; display: grid; grid-templat
 .case-phone-card .campaign-brand-copy { display: flex; flex-direction: column; min-width: 0; gap: 4px; }
 .case-phone-card .campaign-brand-copy .campaign-brand-name { font-size: 14.4px; line-height: 1.15; font-weight: 650; letter-spacing: -.035em; }
 .case-phone-card .campaign-brand-copy .campaign-brand-role { font-size: 10px; line-height: 1.3; font-weight: 400; letter-spacing: 0; color: #606065; }
+
+/* Muted alert panel and three numbered, hanging-indent action steps. */
+.case-brief-card .brief-alert { background: #f2f2f4; padding: 14px 12px; }
+.case-brief-card .brief-steps { list-style: decimal outside; margin: 18px 0; padding-left: 25px; }
+.case-brief-card .brief-steps li { padding-left: 5px; margin: 0 0 18px; }
+.case-brief-card .brief-steps li:last-child { margin-bottom: 0; }
+.case-brief-card .brief-steps li::marker { color: #414247; font-weight: 400; }
